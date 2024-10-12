@@ -1,0 +1,42 @@
+.section3 {
+    background-color:  rgb(14, 18, 25);
+    color: white;
+    padding: 30px 0px;
+
+    .cards {
+        padding: 0px 8px;
+    }
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+    button {
+        margin: auto;
+        display: block;
+        outline: 0;
+        padding: 13px;
+        margin-top: 30px;
+        border: 1px solid rgb(255, 102, 102); 
+    background-color: rgb(255, 102, 102);
+    font-weight: 600;
+
+   
+}
+button:hover {
+    background-color: transparent;
+        color: rgb(255, 102, 102);
+        transition: .8s;
+    }
+    img {
+        transition: .6s;
+    }
+}
+h2:hover {
+         color:rgb(255, 102, 102) ;
+         transition: .8s;
+     }
+ .cards:hover img {
+    transform: translatey(-15px);
+    transition: 1s;
+    filter: grayscale(100%);
+ }

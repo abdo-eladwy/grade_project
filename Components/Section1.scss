@@ -1,0 +1,47 @@
+.section1 {
+    background-color: rgb(14, 18, 25);
+    color: white;
+    padding: 40px 5px;
+h2{
+    font-size: 45px;
+    font-weight: 700px;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+
+}
+span {
+    color: rgb(255, 102, 102);
+    font-weight: 700;
+    line-height: 20px;
+}
+input  {
+    border: 1px solid rgb(91, 99, 113);
+    background-color: transparent;
+    padding: 17px;
+    outline: 0;
+    color: white;
+}
+textarea {
+    border: 1px solid rgb(91, 99, 113);
+    background-color: transparent;
+    padding:  17px;
+    outline: 0;
+    color: white;
+    resize:none ;
+}
+button {
+    border: 1px solid rgb(255, 102, 102); 
+    background-color: rgb(255, 102, 102);
+    padding:18px 10px;
+    font-weight: 600;
+   
+}
+}
+button:hover {
+background-color: transparent;
+    color: rgb(255, 102, 102);
+    transition: .8s;
+}

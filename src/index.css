@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+#root {
+    width: 100%;
+    min-height: 100vh;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+   
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+   
+}
+p , li{
+    font-weight: 400;
+    line-height: 22.4px;
+    margin-top: 20px;
+    font-size: 16px;
+}
