@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  
+
+/* السكشن الثانى  */
+/* لإضافة margin-bottom عند العرض على الشاشات الصغيرة */
+@media (max-width: 768px) {
+    .artical .col-12 {
+      margin-bottom: 2rem; /* يمكنك تعديل القيمة حسب الحاجة */
+      height: 100%;
+    }
+  }
+  /* اللون الأحمر للرابط */
+  .artical a {
+    color: rgb(255, 102, 102); /* لون النص للرابط */
+    text-decoration: none; /* إزالة الخط السفلي */
+    position: relative; /* إعداد للموقع لعمل التأثير لاحقاً */
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند تغيير اللون */
+  }
+  
+  /* عند التمرير بالماوس يظهر خط سفلي */
+  .artical a::after {
+    content: ''; /* محتوى فارغ لإنشاء الخط */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* موقع الخط تحت النص */
+    height: 2px; /* ارتفاع الخط */
+    background-color: rgb(255, 102, 102); /* لون الخط الأحمر */
+    transform: scaleX(0); /* بدء التأثير بحجم الخط 0 */
+    transition: transform 0.3s ease-in-out; /* تأثير سلس عند ظهور الخط */
+  }
+  
+  /* التأثير عند التمرير */
+  .artical a:hover::after {
+    transform: scaleX(1); /* يظهر الخط عند التمرير */
+  }
+  
+  .artical a:hover {
+    color: rgb(255, 102, 102); /* تأكيد بقاء اللون الأحمر عند التمرير */
+  }
+  @media (min-width: 992px) and (max-width: 1440px) {
+    .artical {
+      height: 100%; /* تأكد من أن العناصر تأخذ الارتفاع الكامل */
+    }
+  }
+  
+  

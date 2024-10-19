@@ -3,10 +3,10 @@
     color: white;
     padding: 30px 0px;
 
-    .cards {
+    .cardss {
         padding: 0px 8px;
     }
-    h2 {
+    .h5 {
         font-size: 25px;
         font-weight: 700;
     }
@@ -31,11 +31,11 @@ button:hover {
         transition: .6s;
     }
 }
-h2:hover {
+.h5:hover {
          color:rgb(255, 102, 102) ;
          transition: .8s;
      }
- .cards:hover img {
+ .cardss:hover img {
     transform: translatey(-15px);
     transition: 1s;
     filter: grayscale(100%);

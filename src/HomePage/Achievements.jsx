@@ -1,7 +1,7 @@
 import React from 'react'
-import "./Section2.scss"
+import "./Achievements.scss"
 
-export default function Section2() {
+export default function Achievements() {
   return (
     <div className='section2  col-12'>
       <div className='col-12 container  d-flex flex-column flex-md-row justify-content-between align-items-center '>
