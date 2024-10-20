@@ -1,0 +1,40 @@
+.sec_content {
+  padding: 90px 0px;
+  p {
+    line-height: 33px;
+  }
+  .parent1,
+  .parent2,
+  .parent3 {
+    padding-bottom: 40px;
+    // height: 430px;
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .images2 {
+        order: 2;
+        padding-left: 20px;
+      }
+      .child1 {
+        order: 1;
+      }
+    }
+  }
+}
+.parent2,
+.parent3 {
+  padding-top: 30px;
+}
+// img {
+//   // object-fit: contain;
+// }
+
+span {
+  color: rgb(255, 102, 102);
+  font-weight: 600;
+}
+.child {
+  @media (min-width:1025px) {
+    
+      padding-left: 40px;
+  }
+  
+}

@@ -1,0 +1,18 @@
+
+
+
+.allcontnt {
+    @media (min-width :992px) and (max-width :1024px) {
+       flex-direction: column;
+       
+        
+    }
+    div {
+        @media (min-width :992px) and (max-width :1024px) {
+            width: 100%;
+            
+            
+             
+         }
+    }
+}
