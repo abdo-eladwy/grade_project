@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  /* السيكشن الثالث */
+
+.component {
+    padding: 40px 0;
+    background: #0e1219;
+  
+  }
+  .componentcomponent{
+    background: #0e1219;
+  }
+  .component h1, .component h4, .component h5 {
+    margin-bottom: 20px;
+  }
+  
+  .component button {
+    margin-top: 20px;
+  }
+  
+  /* تغيير لون خلفية .component */
+  .component {
+    background-color: rgb(255, 102, 102);
+    background: #0e1219;
+  
+  }
+  
+  /* تصميم الزر Read More */
+  .component button {
+    border: 2px solid rgb(255, 102, 102); /* لون الحدود */
+    color: black; /* لون النص */
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: rgb(255, 102, 102); /* جعل الخلفية شفافة */
+    font-size: medium;
+    font-weight:bold;
+    text-decoration: none;
+  }
+  
+  /* التأثير عند مرور الماوس */
+  .component button:hover {
+    background-color: transparent; /* تظل الخلفية شفافة */
+    color:rgb(255, 102, 102); /* تغيير لون النص إلى الأبيض */
+    border-color:rgb(255, 102, 102); /* تغيير لون الحدود إلى الأبيض */
+  }
+  .component1 h1{
+   font-size: 3.6rem;
+  }
+  .component h6 {
+    color: rgb(255, 102, 102); /* اللون المطلوب */
+  }
+  .component2 span{
+    border: 2px solid rgb(255, 102, 102); /* لون الحدود */
+    padding: 6px 13px;
+  }
+  @media (min-width: 992px) and (max-width: 1440px) {
+    .component5, .component6 {
+      height: 100%; /* تأكد من أن العناصر تأخذ الارتفاع الكامل */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .component1 h1{
+      font-size: 2.5rem;
+    }
+  }
+  
+@media (max-width: 576px) {
+  .component1 h1{
+    font-size: 1.9rem;
+  }
+}

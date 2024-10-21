@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  /* السيكشن الرابع boxs */
+.box-cont{
+    background-color: #121720;
+  }
+  .box-img,.box-cont{
+    /* height: 986.4px; */
+    object-fit: cover;
+  }
+  .box-cont h6{
+    color:rgb(255, 102, 102) ;
+  }
+  
+  /* .box-cont p{
+    width: 485.2px;
+    height: 150.4px;
+  } */
+  .box-cont button {
+    border: 2px solid rgb(255, 102, 102); /* لون الحدود */
+    color: black; /* لون النص */
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    background-color: rgb(255, 102, 102); /* جعل الخلفية شفافة */
+    font-size: medium;
+    font-weight:bold;
+    text-decoration: none;
+  }
+  
+  /* التأثير عند مرور الماوس */
+  .box-cont button:hover {
+    background-color: transparent; /* تظل الخلفية شفافة */
+    color:rgb(255, 102, 102); /* تغيير لون النص إلى الأبيض */
+    border-color:rgb(255, 102, 102); /* تغيير لون الحدود إلى الأبيض */
+  }
+  .list-square li {
+    list-style-type: square; /* تظهر القائمة على شكل مربع */
+     /* لون النص يبقى كما هو */
+    margin-bottom: 10px; /* مسافة بين العناصر */
+    
+  }
+  
+  .list-square li::marker {
+    color: rgb(255, 102, 102); /* لون المربع فقط */
+  }
+  @media (max-width: 992px) {
+    .box-img, .box-cont {
+      width: 100% !important; /* جعل الصور والمحتوى يأخذ عرض كامل */
+    }
+    .boxs {
+      flex-direction: column; /* ترتيب العناصر رأسياً */
+    }
+    .box-img, .box-cont {
+      margin-bottom: 2px; /* إضافة مسافة بين العناصر */
+    }
+  }
+  
+  

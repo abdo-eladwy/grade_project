@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  
+/* السيكشن الخامس cards */
+/* ضبط الألوان لعناصر h6, h1, h2, a */
+.cards {
+    background-color: #0e1219; /* الخلفية العامة */
+  }
+  
+  .cards h6 {
+    color: rgb(167, 79, 79); /* اللون الأحمر لـ h6 */
+  }
+  
+  .cards h2,.cards p {
+    color: white; /* اللون الأبيض لـ h2 */
+  }
+  
+  .cards h1 {
+    color: white; /* اللون الأبيض لـ h1 بشكل عام */
+    transition: color 0.3s ease; /* تأثير الانتقال للون */
+    font-size:xx-large;
+  }
+  
+  /* تأثير عند مرور الماوس على h1 */
+  .cards h1:hover {
+    color: rgb(255, 102, 102); /* تحويل لون h1 عند التمرير إلى اللون الأحمر */
+  }
+  
+  .cards a {
+    color: rgb(255, 102, 102); /* اللون الأحمر للرابط */
+    text-decoration: none; /* إزالة الخط السفلي */
+    position: relative; /* إعداد للموقع لعمل التأثير لاحقاً */
+    transition: color 0.3s ease-in-out; /* تأثير سلس عند تغيير اللون */
+  }
+  
+  /* عند التمرير بالماوس يظهر خط سفلي */
+  .cards a::after {
+    content: ''; /* محتوى فارغ لإنشاء الخط */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; /* موقع الخط تحت النص */
+    height: 2px; /* ارتفاع الخط */
+    background-color: rgb(223, 106, 106); /* لون الخط الأحمر */
+    transform: scaleX(0); /* بدء التأثير بحجم الخط 0 */
+    transition: transform 0.3s ease-in-out; /* تأثير سلس عند ظهور الخط */
+  }
+  
+  /* التأثير عند التمرير */
+  .cards a:hover::after {
+    transform: scaleX(1); /* يظهر الخط عند التمرير */
+  }
+  
+  .cards a:hover {
+    color: rgb(255, 102, 102); /* تأكيد بقاء اللون الأحمر عند التمرير */
+  }
+  
+  /* تغيير لون الحدود عند مرور الماوس */
+  .cards .card1 {
+    border-color: white; /* لون الخلفية الافتراضي */
+    border: 1px solid white; /* البوردر الافتراضي باللون الأبيض */
+    transition: border-color 0.3s ease; /* تأثير سلس لتغيير لون البوردر */
+    min-height: 450px;
+  }
+  .card1 img{
+    color: rgb(232, 129, 129)
+  }
+  .card1 img:hover{
+    filter: none;
+    transform: translatey(0px);
+    transition:1s;
+
+
+  }
+  .cards .card1:hover {
+    border-color: rgb(186, 53, 53); /* تغيير لون البوردر عند التمرير إلى اللون الأحمر */
+  }
+  .cards .card1 {
+    border-color: white;
+    border: 1px solid white;
+    transition: border-color 0.3s ease;
+    min-height: 450px; /* لضمان تساوي الطول */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* لضمان توزيع المحتوى بالتساوي */
+  }
+  
+  .cards .card1:hover {
+    border-color: rgb(188, 79, 79);
+  }
+  
+  
