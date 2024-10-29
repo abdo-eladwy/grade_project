@@ -1,0 +1,139 @@
+.section4 {
+    background-image: url('./gavel-on-the-background-of-vintage-lawyer-books-concept-of-law-1.jpg');
+    color: white;
+    position: relative;
+    height: 490px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    z-index: -10;
+    background-attachment: fixed;
+    padding: 20px;
+  
+    .overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.58);
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    .content {
+      z-index: 1;
+      text-align: center;
+  
+      h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        padding-bottom: 11px;
+      }
+  
+      p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        padding-bottom: 15px;
+      }
+  
+      h6 {
+        color: #b85c38;
+        padding-bottom: 12px;
+      }
+  
+      .box1, .box2 {
+        margin: 15px;
+        text-align: center;
+        flex: 1;
+        padding: 10px;
+  
+        .boxh1 {
+          font-size: 2.5rem;
+          font-weight: bold;
+          color: #b85c38;
+        }
+  
+        h3 {
+          font-size: 1.2rem;
+        }
+      }
+  
+      .box1 {
+        border-right: 1px solid rgba(245, 222, 179, 0.274);
+      }
+  
+      .box2 .boxh1 {
+        color: #cf704b;
+      }
+    }
+  
+    /* لشاشات المتوسطة (أجهزة لوحية) */
+    @media (max-width: 992px) {
+      .content h1 {
+        font-size: 2rem;
+      }
+  
+      .box1, .box2 {
+        .boxh1 {
+          font-size: 2rem;
+        }
+  
+        h3 {
+          font-size: 1rem;
+        }
+      }
+    }
+  
+    /* لشاشات الهواتف الذكية */
+    @media (max-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+  
+      .content {
+        h1 {
+          font-size: 1.8rem;
+        }
+  
+        p {
+          font-size: 1rem;
+        }
+  
+        .box1, .box2 {
+          width: 100%;
+          margin-bottom: 20px;
+          
+          .boxh1 {
+            font-size: 1.5rem;
+          }
+  
+          h3 {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  
+    /* لشاشات الصغيرة جدًا (أقل من 576px) */
+    @media (max-width: 576px) {
+      .content h1 {
+        font-size: 1.5rem;
+      }
+  
+      p {
+        font-size: 0.9rem;
+      }
+  
+      .box1, .box2 {
+        .boxh1 {
+          font-size: 1.2rem;
+        }
+  
+        h3 {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+  

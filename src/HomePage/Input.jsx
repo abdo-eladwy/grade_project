@@ -3,7 +3,7 @@ import"./Input.scss"
 
 export default function Input() {
   return (
-    <div className='section1 col-12  '>
+    <div className='section251 col-12  '>
      <div className='section1content col-12 container d-flex flex-wrap'>
      <div className='col-12 col-md-6 p-3'>
         <span>CONTACT</span>
@@ -22,3 +22,4 @@ export default function Input() {
     </div>
   )
 }
+

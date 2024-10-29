@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+  }
+  body{
+    overflow-x: hidden;
+  }
+  
+.cardsss {
+    background-color: #0e1219; 
+  }
+  
+  .cardsss h6 {
+    color: rgb(197, 82, 82); 
+  }
+  
+  .cardsss h2,.cardsss p {
+    color: white; 
+  }
+  
+  .cardsss h1 {
+    color: white;
+    transition: color 0.3s ease;
+    font-size:xx-large;
+  }
+  
+  .cardsss h1:hover {
+    color: rgb(255, 102, 102); 
+  }
+  
+  .cardsss a {
+    color: rgb(255, 102, 102); 
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .cardsss a::after {
+    content: ''; 
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px; 
+    height: 2px; 
+    background-color: rgb(223, 106, 106); 
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out; 
+  }
+  
+ 
+  .cardsss a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .cardsss a:hover {
+    color: rgb(255, 102, 102); 
+  }
+  
+  .cardsss .card2 {
+    border-color: white;
+    border: 1px solid white; 
+    transition: border-color 0.3s ease;
+    min-height: 450px;
+    border-radius: 8px;
+  }
+  .card2 img{
+    color: rgb(232, 129, 129)
+    
+  }
+  .card2 img:hover{
+    filter: none;
+    transform: translatey(0px);
+    transition:1s;
+
+
+  }
+  .cardsss .card2:hover {
+    border-color: rgb(240, 132, 132);
+  }
+  .cardsss .card2 {
+    border-color: white;
+    border: 1px solid white;
+    transition: border-color 0.3s ease;
+    min-height: 450px; /* لضمان تساوي الطول */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+  }
+  
+  .cardsss .card2:hover {
+    border-color: rgb(222, 99, 99);
+  }
+  .cardsss .card2 {
+    border-color: white;
+    border: 1px solid white;
+    transition: border-color 0.3s ease, transform 0.5s ease;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cardsss .card2:hover {
+    border-color: rgb(222, 99, 98);
+    transform: translateY(-10px);
+}
+
+.card2 img {
+    transition: transform 0.5s ease; 
+}
+
+.card2 img:hover {
+    transform: translateY(-5px); 
+}
+
+  

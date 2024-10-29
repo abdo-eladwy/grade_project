@@ -62,7 +62,7 @@
   }
   @media (min-width: 992px) and (max-width: 1440px) {
     .component5, .component6 {
-      height: 100%; /* تأكد من أن العناصر تأخذ الارتفاع الكامل */
+      height: 100%;
     }
   }
   

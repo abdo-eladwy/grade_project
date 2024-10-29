@@ -1,35 +1,49 @@
 import Homepage from "./HomePage/Homepage";
-
-
-<<<<<<< HEAD
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Contact from "./Pages/ContactPage/Contact"
 import AboutUs from "./Pages/AboutPage/AboutUs";
-import Home from "./Pages/HomePage/Home";
-export default function App() {
-  return (
-    <div className="col-12 ">
-      {/* <Homepage></Homepage>
-      <AboutPage></AboutPage>
-      <Contact></Contact> */}
-     
-       <BrowserRouter>
-         <Routes>
-          <Route path="/" element={<Home></Home>}></Route>
-           <Route path="/about" element = {<AboutUs></AboutUs>}></Route>
-           <Route path="/contact" element = {<Contact></Contact>}></Route>
-          
-         </Routes>
-      </BrowserRouter> 
-    </div> 
-  );
-=======
+import Contact from "./Pages/ContactPage/Contact";
+import OurVision from './Ourvision/OurVision'
+import AchievementPage from "./Achievements/AchievementPage";
 
+// import Linkk from "./Articles/Articles";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Articles from "./Articles/Articles";
+import Sections from "./Articles/Sections";
+import BusinessLitigation from "./Articles/BusinessLitigation";
+import MedicalMalpractice from "./Articles/MedicalMalpractice";
+import InsuranceCoverage from "./Articles/InsuranceCoverage";
+import RealEstate from "./Articles/RealEstate";
+import FamilyLaw from "./Articles/FamilyLaw";
+import InjuryLitigation from "./Articles/InjuryLitigation";
+import LaborLaw from "./Articles/LaborLaw";
+import AutoAccidents from "./Articles/AutoAccidents";
+import CorporateFraud from "./Articles/CorporateFraud";
 export default function App() {
   return (
-   <div className='col-12 '>
-     <Homepage/>
-   </div>
+  <div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={ <Homepage/>}/>
+        <Route path="/AboutUs" element={<AboutUs/>}/>
+        <Route path="/Contact" element={ <Contact/>}/>
+        <Route path="/OurVision" element={<OurVision/>}/>
+        <Route path="/Achievement" element={<AchievementPage/>}/>
+        <Route path="/Articles" element={<Articles/>}/>
+        <Route path="/Sections" element={<Sections/>}/>
+        <Route path="/BusinessLitigation" element={<BusinessLitigation/>}/>
+        <Route path="/MedicalMalpractice" element={<MedicalMalpractice/>}/>
+        <Route path="/InsuranceCoverage" element={<InsuranceCoverage/>}/>
+        <Route path="/RealEstate" element={<RealEstate/>}/>
+        <Route path="/FamilyLaw" element={<FamilyLaw/>}/>
+        <Route path="/InjuryLitigation" element={<InjuryLitigation/>}/>
+        <Route path="/LaborLaw" element={<LaborLaw/>}/>
+        <Route path="/AutoAccidents" element={<AutoAccidents/>}/>
+        <Route path="/CorporateFraud" element={<CorporateFraud/>}/>
+      </Routes>
+    </BrowserRouter>
+  </div>
   )
->>>>>>> a3f05ed1ba07b75c8ac72d5b88ba3ed2325196f4
 }
+
+
+
+

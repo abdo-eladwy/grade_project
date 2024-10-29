@@ -3,9 +3,9 @@ import "./Team.scss"
 export default function Team() {
   return (
     <div className='section3 col-12'>
-        <div className='section3content container col-12  '>
-            <span className=' d-block text-center p-3 text-danger'>LAWYERS</span>
-            <h2 className='h5 text-center p-3 mb-4' >Meet Our Team</h2>
+        <div className='section3content container col-12  pt-3'>
+            <span className=' text-center  text-danger col-12'>LAWYERS</span>
+            <h2 className='h5 text-center col-12 p-3 mb-5' >Meet Our Team</h2>
             <div className='col-12 d-flex flex-wrap '>
                <div className='cardss col-12 col-md-6  col-lg-3 text-center '>
                 <img src="https://matchthemes.com/demowp/volenti/wp-content/uploads/lawyer-2.jpg" alt="#"  className='col-12'/>

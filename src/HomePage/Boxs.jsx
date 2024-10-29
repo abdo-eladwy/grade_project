@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Boxs.css";
 import img1 from "./fullscreen.jpg";
 import img2 from "./custody-battle.jpg";
+import { Link } from "react-router-dom";
 
 export default function Boxs() {
   return (
@@ -45,9 +46,9 @@ export default function Boxs() {
             <li>AVVO – Very Good 2018</li>
             <li>10 Best Attorneys Arizona</li>
           </ul>
-          <a className="mb-5 pb" href="#">
+          <Link className="mb-5 pb" to="/">
             <button className="btn btn-outline-light">View More</button>
-          </a>
+          </Link>
         </div>
         <img className="box-img col-6" src={img2} alt="" />
       </div>

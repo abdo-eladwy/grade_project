@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 100%;
+}
+
+.Succes {
+    h6 {
+        color: #b85c38;
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        line-height: 3.5rem;
+    }
+
+    p {
+        padding-bottom: 1rem;
+    }
+
+    .divv {
+        background-color: #f3f3f3;
+        border-left: 12px solid #b85c38;
+        border-radius: 5px;
+    }
+
+    .divv p {
+        margin-right: 2rem;
+        padding: 2rem;
+    }
+
+    /* التحكم في حجم دائري التقدم */
+    .CircularProgressbar {
+        max-width: 100px; /* التحكم في حجم دائري التقدم */
+        margin-bottom: 1rem;
+    }
+}
+
+/* تعديل على الشاشات الأصغر */
+@media (max-width: 768px) {
+    .Succes {
+        flex-direction: column;
+        align-items: center; /* لضمان التوسيط على الشاشات الأصغر */
+        
+        h1 {
+            font-size: 2rem;
+            line-height: 2.5rem;
+            text-align: center;
+        }
+
+        .divv {
+            width: 100%; /* جعل العرض بالكامل للشاشات الصغيرة */
+        }
+
+        .divv p {
+            font-size: 0.9rem;
+            margin-right: 0;
+            padding: 1rem;
+            text-align: center; /* لضمان أن النص متناسب مع الشاشات الصغيرة */
+        }
+
+        .Succes2 {
+            margin-top: 2rem;
+            width: 100%; /* تأكد من أن العناصر تحتل العرض الكامل */
+        }
+
+        .CircularProgressbar {
+            max-width: 80px; /* حجم أصغر لدائري التقدم */
+        }
+
+        h3 {
+            font-size: 1.2rem; /* تصغير حجم النص */
+            text-align: center;
+        }
+    }
+}
+
+/* تحسين العرض على الشاشات الأصغر من 576px */
+@media (max-width: 576px) {
+    .Succes {
+        h1 {
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .divv {
+            width: 100%;
+        }
+
+        .divv p {
+            font-size: 0.8rem;
+            text-align: center;
+        }
+
+        .CircularProgressbar {
+            max-width: 70px;
+        }
+
+        h3 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+}

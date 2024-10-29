@@ -1,6 +1,7 @@
 import React from 'react'
 import "bootstrap/dist/css/bootstrap.min.css";
 import './History.css'
+import { Link } from 'react-router-dom';
 export default function History() {
   return (
     <div
@@ -8,26 +9,25 @@ export default function History() {
         style={{ background: "#0e1219" }}
       >
         <div className="component col-12 d-flex justify-content-center flex-wrap text-light py-5">
-          <div className="component1 col-12 col-lg-5 d-flex flex-column justify-content-center align-items-start text-start p-5 mb-5">
+          <div className="component1 col-12 col-lg-5 d-flex flex-column justify-content-center align-items-start p-5 mb-5">
             <h6
-              className="text-uppercase pb-4"
+              className="text-uppercase pb-4 text-end"
               style={{ color: "rgb(255, 102, 102)" }}
             >
-              Brief History
+             نبذة تاريخية
             </h6>
-            <h1 className="mb-5 pb-5">
-              We're Volenti, an award-winning law firm
+            <h1 className="mb-5 pb-5 ">
+            نحن شركة على الحوسنى، وهي شركة محاماة حائزة على جوائز
             </h1>
-            <h4 className="mb-2 pb-3">
-              We've helped clients large and small since 1975.
+            <h4 className="mb-2 pb-3 text-end">
+            لقد ساعدنا العملاء الكبار والصغار منذ عام 1975.
             </h4>
             <p className="mb-4">
-              Aperiri hendrerit democritum ex nec. Sit ut causae referrentur,
-              dolorum intellegam has ex, mel ad movet aperiam.
+            مرحبًا بكم في شركة الحوسنى، حيث يجتمع التميز والاحترافية في عالم المحاماة. نحن شركة محاماة حائزة على جوائز، نقدم خدمات قانونية متكاملة تلبي احتياجاتكم بأعلى معايير الجودة والتميز
             </p>
-            <a href="">
-              <button className="btn-outline-light">Read More</button>
-            </a>
+            <Link to="/Achievement">
+              <button className="btn-outline-light">اقرا المزيد</button>
+            </Link>
           </div>
 
           <div className="component2 col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
@@ -36,20 +36,18 @@ export default function History() {
                 <h4>
                   <span>1975</span>
                 </h4>
-                <h1 className="pb-4">Foundation</h1>
+                <h1 className="pb-4">مؤسسة</h1>
                 <p className="pb-5">
-                  Magna meliore moderatius ut eam, eum ei illud discere sanctus.
-                  Posse officiis deterruisset sed cu, erat audire veritus.
+                تقديم الحلول القانونية المبتكرة والمتكاملة، مكرسة لتحقيق العدالة والتميز في كل خدمة تقدمها
                 </p>
               </div>
               <div className="component6 container col-12 col-md-5 mb-5 d-flex flex-column justify-content-between border-bottom p-3">
                 <h4>
                   <span>2004</span>
                 </h4>
-                <h1 className="pb-4">100 Attorneys</h1>
+                <h1 className="pb-4">100 محامي</h1>
                 <p className="pb-5">
-                  Magna meliore moderatius ut eam, eum ei illud discere sanctus.
-                  Posse officiis deterruisset sed cu, erat audire veritus.
+                 يجمع بين الخبرة القانونية والشغف لحماية حقوق العملاء، مما يجعله شريكًا موثوقًا في جميع القضايا القانونية
                 </p>
               </div>
             </div>
@@ -59,20 +57,18 @@ export default function History() {
                 <h4>
                   <span>1990</span>
                 </h4>
-                <h1 className="pb-4">New Office</h1>
+                <h1 className="pb-4">افضل مكتب</h1>
                 <p className="pb-5">
-                  Magna meliore moderatius ut eam, eum ei illud discere sanctus.
-                  Posse officiis deterruisset sed cu, erat audire veritus.
+                مكتبنا يمثل انطلاقة مبتكرة في عالم المحاماة، حيث نقدم خدمات قانونية متخصصة تتماشى مع أحدث الاتجاهات، مع التركيز على تقديم حلول مخصصة تلبي احتياجات كل عميل
                 </p>
               </div>
               <div className="component8 container col-12 col-md-5 mb-5 d-flex flex-column justify-content-center align-items-start text-start p-3">
                 <h4> 
                   <span>2019</span>
                 </h4>
-                <h1 className="pb-4">Best Law Firm</h1>
+                <h1 className="pb-4">الجوده</h1>
                 <p className="pb-5">
-                  Magna meliore moderatius ut eam, eum ei illud discere sanctus.
-                  Posse officiis deterruisset sed cu, erat audire veritus.
+                نحن في أفضل مكتب محاماة نتميز بخبرة قانونية رائدة، حيث نوفر لعملائنا استشارات متخصصة وحلولًا فعالة تضمن تحقيق نتائج إيجابية، مع التزامنا التام بالشفافية والاحترافية في جميع تعاملاتنا
                 </p>
               </div>
             </div>

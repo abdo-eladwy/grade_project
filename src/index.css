@@ -10,10 +10,11 @@
     min-height: 100vh;
     /* overflow-x: hidden; */
 }
-/* body{
+body{
     max-width: 100%;
     overflow-x: hidden;
-} */
+    background: #0e1219;
+}
 ul {
     margin: 0;
     padding: 0;
