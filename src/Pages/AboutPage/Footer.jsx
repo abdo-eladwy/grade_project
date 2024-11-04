@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <div className="footer col-12 d-flex align-content-center">
       <div className="footercontent container  d-flex p-0 flex-wrap  ">
-        <div className="col-12 col-lg-3 col-md-6 p-3 ">
+        <div className="col-12 c col-md-6 col-lg-3 p-3 prt1 ">
           <h5>About Us</h5>
           <p>
             We are extremely proud nemo enim ipsam voluptatem quia voluptas sit
@@ -14,7 +14,7 @@ export default function Footer() {
             P: 1-800-111-222 <br /> E:contact@example.com
           </p>
         </div>
-        <div className="col-12 col-lg-3 col-md-6  p-3">
+        <div className="col-12  col-md-6 col-lg-3 p-3 prt2">
           <h5>Latest Articles</h5>
         
          <ul>
@@ -36,7 +36,7 @@ export default function Footer() {
           </ul>
          
         </div>
-        <div className="col-12 col-lg-3 col-md-6 p-3">
+        <div className="col-12 col-md-6 col-lg-3 p-3 prt3">
           <h5>Quick Links</h5>
           <ul>
             <li>
@@ -56,7 +56,7 @@ export default function Footer() {
             </li>
           </ul>
         </div>
-        <div className="col-12 col-lg-3 col-md-6 p-3">
+        <div className="col-12 col-lg-3 col-md-6 p-3 prt4">
           <h5>Social</h5>
 
          

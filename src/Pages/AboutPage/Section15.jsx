@@ -12,17 +12,16 @@ export default function Section15() {
             style={{objectFit: "content"}}
           />
         </div>
-        <div className="col-12 col-lg-6 " style={{paddingLeft:'45px'}}>
-          <span className=" d-block d-lg-inline mt-5 " style={{color:'#ff6666', fontSize:'16px', fontWeight:'600'}}>Brief History</span>
-          <h2 className="mt-3" style={{fontSize:'48px', fontWeight:'700'}}>Bio & Education</h2>
-          <p className="mt-5" style={{fontSize:'16px', fontWeight:'600'}}>
+        <div className="col-12 col-lg-6 p-md-3 ">
+          <span className=" d-block d-lg-inline mt-5  ">Brief History</span>
+          <h2 className="mt-3" >Bio & Education</h2>
+          <p className="mt-5" >
             Lorem ipsum dolor sit amet, expetenda ullamcorper quo et, possim
             sanctus definitionem pri ex. Falli zril omnium mel et, altera option
             ocurreret nec no, at vis eligendi ocurreret mediocritatem. Eam
             epicuri omnesque postulant an, quo et omnium denique tacimates.
-            Efficiantur signiferumque et vim, rebum omittam.
           </p>
-          <p className="mt-5" style={{fontSize:'16px', fontWeight:'600'}}>
+          <p className="mt-5" >
             His quaeque adipiscing ea, cum ad partem dolores. Quod dolorum
             voluptaria ei mel. Pro evertitur assueverit ad, cum in eius senserit
             salutatus. Qui quas eleifend no. Natum accommodare est ad, cu mea

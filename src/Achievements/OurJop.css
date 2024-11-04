@@ -105,3 +105,8 @@
     max-width: 100%;
   }
 }
+@media (min-width: 992px) and (max-width: 1024px) {  
+  .container {
+      flex-direction: row;
+      gap: 0;
+  } }

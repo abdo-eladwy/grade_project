@@ -51,7 +51,7 @@ body {
 }
 
 .collapse .nav-link::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   right: 0;
@@ -69,7 +69,6 @@ body {
 .container a {
   text-decoration: none;
 }
-
 
 @media (max-width: 992px) {
   .navbar-nav {
@@ -119,7 +118,7 @@ body {
   }
 }
 
- @media (min-width: 992px) and (max-width: 1440px) {
+@media (min-width: 992px) and (max-width: 1440px) {
   .navbar-brand {
     flex-grow: 1;
   }
@@ -137,5 +136,17 @@ body {
   .scrolled {
     background: rgba(93, 89, 89, 0.674);
   }
-} 
+ 
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+  
+ .navbar .container {
+    flex-direction: row;
+    gap: 0px;
+  }
+
+
+}
+
 

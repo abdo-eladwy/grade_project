@@ -8,7 +8,7 @@ export default function AboutMe() {
         <img className="col-12 d-flex" src={img2} alt="" />
         <div className="overlay-color"></div>
         <div className="overlay-text">
-          {/* <h1 className="d-flex">About Us</h1> */}
+          <h1 className="d-flex">About Us</h1>
         </div>
       </div>
     </div>

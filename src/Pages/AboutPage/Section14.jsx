@@ -16,7 +16,7 @@ export default function Section14() {
           <div className="firstsec pt-4 pt-lg-0  ">
             <span >BASIC PRINCIPLES</span>
             <h3>Our Core Values</h3>
-            <p>
+            <p >
               Lorem ipsum dolor sit amet, expetenda ullamcorper quo et, possim
               sanctus definitionem pri ex. Falli zril omnium mel et, altera
               option ocurreret nec no, at vis eligendi ocurreret mediocritatem.

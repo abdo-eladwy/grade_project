@@ -17,3 +17,9 @@ p {
     line-height: 28px;
   
 }
+  @media (min-width: 992px) and (max-width: 1024px) {  
+    .all-contnt .container {
+        flex-direction: row;
+        gap: 0;
+    }
+}

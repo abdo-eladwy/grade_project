@@ -28,7 +28,7 @@ export default function NavBar() {
       <nav
         className={`navbar navbar-expand-lg ${isScrolled ? "scrolled" : "transparent-navbar"} fixed-top col-12`}
       >
-        <div className="container">
+        <div className="container ">
           <Link className="navbar-brand col-3" to="/">
             <img src={logo} alt="Law Firm Logo" style={{ height: "40px" }} />
           </Link>
