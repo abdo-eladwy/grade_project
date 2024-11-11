@@ -41,6 +41,7 @@
 
   .sec_content {
     padding: 90px 0px;
+    background-color: #121212;
     p {
       line-height: 33px;
     }
@@ -79,7 +80,7 @@
     }
     
   }
-  .parent1 , .parent3 {
+  .parent1 , .parent3  {
     @media (max-width:767px) {
       flex-direction: column-reverse;
     }

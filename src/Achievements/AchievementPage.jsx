@@ -7,7 +7,13 @@ import OurJop from './OurJop'
 import OurProcess from './OurProcess'
 import Footer from '../HomePage/Footer'
 import Section16 from './OurProcess'
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 export default function AchievementPage() {
+  const { pathname } =  useLocation();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[pathname])
   return (
     <div>
       <NavBar/>

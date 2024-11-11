@@ -17,12 +17,15 @@ import InjuryLitigation from "./Articles/InjuryLitigation";
 import LaborLaw from "./Articles/LaborLaw";
 import AutoAccidents from "./Articles/AutoAccidents";
 import CorporateFraud from "./Articles/CorporateFraud";
+import Login from "./LoginRegister/Login";
+import Register from "./LoginRegister/Register";
 export default function App() {
   return (
   <div>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={ <Homepage/>}/>
+        <Route path="/Login" element={ <Login/>}/>
         <Route path="/AboutUs" element={<AboutUs/>}/>
         <Route path="/Contact" element={ <Contact/>}/>
         <Route path="/OurVision" element={<OurVision/>}/>
@@ -38,6 +41,7 @@ export default function App() {
         <Route path="/LaborLaw" element={<LaborLaw/>}/>
         <Route path="/AutoAccidents" element={<AutoAccidents/>}/>
         <Route path="/CorporateFraud" element={<CorporateFraud/>}/>
+        <Route path="/Register" element={<Register/>} />
       </Routes>
     </BrowserRouter>
   </div>

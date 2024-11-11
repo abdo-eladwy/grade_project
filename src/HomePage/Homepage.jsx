@@ -11,9 +11,14 @@ import Artical from './Artical'
 import History from './History'
 import Boxs from './Boxs'
 import Cards from './Cards'
-
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 
 export default function Homepage() {
+  const { pathname } =  useLocation();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[pathname])
   return (
     <div>
      <NavBar/>

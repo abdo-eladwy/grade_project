@@ -1,8 +1,8 @@
 import React from "react";
 import "./OurProcess.scss";
-// import img from "./case-1.jpg";
-// import img2 from "./case-s-800x550.jpg";
-// import img3 from "./case-2.jpg";
+import img from "./case-1.jpg";
+import img2 from "./case-s-800x550.jpg";
+import img3 from "./case-2.jpg";
 
 // export default function OurProcess() {
 //   return (
@@ -62,12 +62,12 @@ import "./OurProcess.scss";
  
 export default function OurProcess() {
   return (
-    <div className="col-12 bg-dark text-light sec_content d-flex justify-content-center align-content-center ">
+    <div className="col-12  text-light sec_content d-flex justify-content-center align-content-center " >
       <div className="container col-12 ">
         <div className="col-12  d-flex flex-wrap  parent1 ">
           <div className="col-12 col-md-6 images2">
             <img
-              src="https://matchthemes.com/demowp/volenti/wp-content/uploads/case-1.jpg"
+             src={img}
               alt="#"
               className="h-100 w-100 "
             />
@@ -98,7 +98,7 @@ export default function OurProcess() {
           </div>
           <div className="col-12 col-md-6 images2  child">
             <img
-              src="https://matchthemes.com/demowp/volenti/wp-content/uploads/case-1.jpg"
+             src={img2}
               alt="#"
               className="h-100 w-100"
             />
@@ -107,7 +107,7 @@ export default function OurProcess() {
         <div className="col-12  d-flex flex-wrap parent3">
           <div className="col-12 col-md-6 images2">
             <img
-              src="https://matchthemes.com/demowp/volenti/wp-content/uploads/case-1.jpg"
+              src={img3}
               alt="#"
               className="h-100 w-100"
             />

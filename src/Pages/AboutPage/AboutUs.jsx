@@ -8,8 +8,13 @@ import Section16 from "./Section16";
 import Footer from "./Footer";
 import NavBar from "../../HomePage/NavBar";
 import OurJop from "./OurJop";
-
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 export default function AboutUs() {
+  const { pathname } =  useLocation();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[pathname])
   return (
     <div>
       <NavBar/>

@@ -71,7 +71,7 @@
     position: relative;
     top: 30px;
     right: 27px;
-   
+   max-width: 100%;
   }
   .body1{
     max-width: 459px;

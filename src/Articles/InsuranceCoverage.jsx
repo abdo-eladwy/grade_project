@@ -9,7 +9,13 @@ import img1 from "./practice-item-3-800x550.jpg";
 import img2 from "./personal-injury-lawyer (1).jpg";
 import NavBar from '../HomePage/NavBar';
 import Footer from '../HomePage/Footer';
+import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
 export default function InsuranceCoverage() {
+  const { pathname } =  useLocation();
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[pathname])
   return (
     <div>
          <div>
