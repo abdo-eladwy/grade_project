@@ -22,7 +22,7 @@ export default function Contact1() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+201063409581&text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
+    const whatsappUrl = `https://api.whatsapp.com/send?phone=+201026194164&text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
     window.open(whatsappUrl, "_blank");
   };
 

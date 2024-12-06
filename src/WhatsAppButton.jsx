@@ -4,7 +4,7 @@ import whatsappIcon from "./WhatsApp-Logo-Circle-768x768.png"; // تأكد من 
 
 export default function WhatsAppButton() {
   const handleWhatsAppClick = () => {
-    const phoneNumber = "+201010829230"; // رقم الهاتف بصيغة الدولة
+    const phoneNumber = "+201026194164"; // رقم الهاتف بصيغة الدولة
     const url = `https://wa.me/${phoneNumber}`;
     window.open(url, "_blank");
   };
