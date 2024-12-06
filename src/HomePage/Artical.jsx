@@ -5,8 +5,11 @@ import icon2 from "./about-h26.png";
 import icon3 from "./about-h25.png";
 import icon4 from "./about-h23.png";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+
 
 export default function Artical() {
+  const { t } = useTranslation();
   return (
     <div>
          <div
@@ -15,34 +18,35 @@ export default function Artical() {
       >
         <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
           <img src={icon1} alt="Image 1" className="img-fluiid mb-5" />
-          <h1 className="mb-5">01. العدالة </h1>
-          <p className="mb-4">
-          تحقيق العدالة في القانون هو الضمان الأساسي لحماية حقوق الأفراد، حيث نعمل جاهدين لتطبيق القوانين بكل نزاهة ومساواة، لنخلق مجتمعا عادلاً يلتزم بالقيم الإنسانية          </p>
-          <Link to="/AboutUs">اقرا المزيد → </Link>
+          <h1 className="mb-5">01. {t("h1")}</h1>
+          <p className="mb-5">
+          {t("carouselp5")} 
+          </p>
+          <Link to="/AboutUs">{t("h14")} → </Link>
         </div>
         <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
           <img src={icon2} alt="Image 2" className="img-fluiid mb-5" />
-          <h1 className="mb-5">02. التفاني</h1>
-          <p className="mb-4">
-          نلتزم في عملنا بروح التفاني التام، حيث نبذل قصارى جهدنا لتقديم أفضل الخدمات القانونية، ونضع احتياجات عملائنا في مقدمة أولوياتنا لضمان حقوقهم وتحقيق تطلعاتهم القانونية
+          <h1 className="mb-5">02. {t("h11")}</h1>
+          <p className="mb-5">
+         {t("carouselp6")}
           </p>
-          <Link to="/Achievement">اقرا المزيد → </Link>
+          <Link to="/Achievement">{t("h14")} → </Link>
         </div>
         <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
           <img src={icon3} alt="Image 3" className="img-fluiid mb-5" />
-          <h1 className="mb-5">03. الخبرة</h1>
-          <p className="mb-4">
-          خبرتنا الواسعة تتيح لنا التعامل مع أعقد القضايا بكفاءة واحترافية، حيث نجمع بين المعرفة المتعمقة والإلمام بالتفاصيل القانونية، لنحقق أفضل النتائج لعملائنا على الدوام
+          <h1 className="mb-5">03. {t("h12")}</h1>
+          <p className="mb-5">
+         {t("carouselp7")}
           </p>
-          <Link to="/Sections">اقرا المزيد → </Link>
+          <Link to="/Sections">{t("h14")} → </Link>
         </div>
         <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
           <img src={icon4} alt="Image 3" className="img-fluiid mb-5" />
-          <h1 className="mb-5">04. الرؤيه</h1>
-          <p className="mb-4">
-          رؤيتنا تتمحور حول بناء علاقة قانونية قوية وموثوقة مع عملائنا، نعمل من خلالها على إيجاد حلول مبتكرة وفعّالة تدعم استقرارهم القانوني وتحقق أهدافهم طويلة المدى
+          <h1 className="mb-5">04. {t("h13")}</h1>
+          <p className="mb-5">
+         {t("carouselp8")}
           </p>
-          <Link to="/OurVision">اقرا المزيد → </Link>
+          <Link to="/OurVision">{t("h14")} → </Link>
         </div>
       </div>
     </div>

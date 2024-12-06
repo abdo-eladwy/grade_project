@@ -19,10 +19,15 @@ import AutoAccidents from "./Articles/AutoAccidents";
 import CorporateFraud from "./Articles/CorporateFraud";
 import Login from "./LoginRegister/Login";
 import Register from "./LoginRegister/Register";
+import "./i18n";
+import GoToTopButton from "./GoToTopButton";
+import WhatsAppButton from "./WhatsAppButton";
 export default function App() {
   return (
   <div>
     <BrowserRouter>
+    <GoToTopButton/>
+
       <Routes>
         <Route path="/" element={ <Homepage/>}/>
         <Route path="/Login" element={ <Login/>}/>
@@ -43,6 +48,8 @@ export default function App() {
         <Route path="/CorporateFraud" element={<CorporateFraud/>}/>
         <Route path="/Register" element={<Register/>} />
       </Routes>
+      <WhatsAppButton />
+
     </BrowserRouter>
   </div>
   )

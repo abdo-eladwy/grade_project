@@ -1,6 +1,10 @@
 import React from "react";
 import "./section14.scss";
+import { useTranslation }  from"react-i18next";
+
 export default function Section14() {
+  const { t } = useTranslation();
+
   return (
     <div className="col-12 section14  justify-content-center align-content-center ">
       <div className="container col-12 d-flex flex-wrap justify-content-between">
@@ -13,46 +17,38 @@ export default function Section14() {
           />
         </div>
         <div className=" col-12   col-lg-6    D2">
-          <div className="firstsec pt-4 pt-lg-0  ">
-            <span >BASIC PRINCIPLES</span>
-            <h3>Our Core Values</h3>
-            <p >
-              Lorem ipsum dolor sit amet, expetenda ullamcorper quo et, possim
-              sanctus definitionem pri ex. Falli zril omnium mel et, altera
-              option ocurreret nec no, at vis eligendi ocurreret mediocritatem.
-              Eam epicuri omnesque postulant an, quo et omnium denique
-              tacimates.
+          <div className="firstsec pt-4 pt-lg-0 ">
+            <span >{t("span4")}</span>
+            <h3>{t("h70")}</h3>
+            <p className=" text-center">
+             {t("carouselp30")}
             </p>
           </div>
-          <div className="d-flex flex-wrap  ">
+          <div className="d-flex flex-wrap  text-end">
             <div className=" col-12 col-md-6  son">
-              <h4>COMMITMENT</h4>
+              <h4>{t("h41")}</h4>
               <p>
-                Per eu nullam ornatus expetenda, in ubique tractatos eos. Sea eu
-                vide dicit, an sit.
+               {t("carouselp31")}
               </p>
             </div>
             <div className=" col-12 col-md-6 son1  ">
-              <h4>TRANSPARENCY</h4>
+              <h4>{t("h42")}</h4>
               <p>
-                Assum adipisci suscipiantur. Mei an case accumsan, vel adipisci
-                temporibus id.
+              {t("carouselp32")}
               </p>
             </div>
           </div>
-          <div className="d-flex  flex-wrap ">
+          <div className="d-flex  flex-wrap text-end">
             <div className=" col-12 col-md-6   son">
-              <h4>RESPECT</h4>
+              <h4>{t("h43")}</h4>
               <p>
-                Per eu nullam ornatus expetenda, in ubique tractatos eos. Sea eu
-                vide dicit, an sit.
+               {t("carouselp34")}
               </p>
             </div>
             <div className=" col-12 col-md-6  son1 ">
-              <h4>PASSION</h4>
+              <h4>{t("h44")}</h4>
               <p>
-                Assum adipisci suscipiantur. Mei an case accumsan, vel adipisci
-                temporibus id.
+               {t("carouselp33")}
               </p>
             </div>
           </div>

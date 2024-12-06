@@ -4,8 +4,7 @@ import Section14 from "./Section14";
 import Section12 from "./Section12";
 import Section13 from "./Section13";
 import Section15 from "./Section15";
-import Section16 from "./Section16";
-import Footer from "./Footer";
+import Footer from "../../HomePage/Footer";
 import NavBar from "../../HomePage/NavBar";
 import OurJop from "./OurJop";
 import { useLocation } from 'react-router-dom'
@@ -25,7 +24,6 @@ export default function AboutUs() {
       <Section13></Section13>
       <Section11></Section11>
       <OurJop/>
-      {/* <Section16></Section16> */}
       <Footer></Footer>
     </div>
   )

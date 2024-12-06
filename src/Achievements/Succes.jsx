@@ -2,6 +2,7 @@ import "./Succes.css";
 import React, { useState, useEffect } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { useTranslation } from "react-i18next";
 
 export default function Succes() {
   const [progress1, setProgress1] = useState(0);
@@ -33,11 +34,12 @@ export default function Succes() {
 
   const startCounting = () => {
     const duration = 2000;
-    smoothAnimateValue(setProgress1, 0, 75, duration);
-    smoothAnimateValue(setProgress2, 0, 90, duration);
-    smoothAnimateValue(setProgress3, 0, 65, duration);
-    smoothAnimateValue(setProgress4, 0, 85, duration);
+    smoothAnimateValue(setProgress1, 0, 70, duration);
+    smoothAnimateValue(setProgress2, 0, 100, duration);
+    smoothAnimateValue(setProgress3, 0, 85, duration);
+    smoothAnimateValue(setProgress4, 0, 96, duration);
   };
+  const { t } = useTranslation();
 
   const smoothAnimateValue = (setState, start, end, duration) => {
     let startTime = null;
@@ -60,18 +62,14 @@ export default function Succes() {
   return (
     <div className="Succes  col-12 d-flex flex-column flex-lg-row bg-white justify-content-around align-items-center align-content-center pt-5 ">
       <div className="Succes 1col-12  col-lg-6 text-start d-flex flex-column justify-content-center align-items-start p-3 pt-5">
-        <h6 className="pb-2">Succes Stats</h6>
-        <h1>Our Lawyer Projects Succes Stats Percent</h1>
+        <h6 className="pb-2">{t("h72")}</h6>
+        <h1>{t("h73")}</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-          tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+         {t("carouselp59")}
         </p>
         <div className="divv container d-flex ">
           <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae ab illo inventore veritatis et quasi architecto beatae vitae
-            dicta sunt explicabo.
+           {t("carouselp60")}
           </p>
         </div>
       </div>
@@ -91,7 +89,7 @@ export default function Succes() {
                   trailColor: "#f7f7f7",
                 })}
               />
-              <h3 className="pt-2">Company Partner</h3>
+              <h3 className="pt-2">{t("h74")}</h3>
             </div>
             <div style={{ width: "80px", marginBottom: "1rem" }}>
               <CircularProgressbar
@@ -103,7 +101,7 @@ export default function Succes() {
                   trailColor: "#f7f7f7",
                 })}
               />
-              <h3 className="pt-2">Products Registered</h3>
+              <h3 className="pt-2">{t("h75")}</h3>
             </div>
           </div>
 
@@ -118,7 +116,7 @@ export default function Succes() {
                   trailColor: "#f7f7f7",
                 })}
               />
-              <h3 className="pt-2">Cases Won</h3>
+              <h3 className="pt-2">{t("h76")}</h3>
             </div>
             <div style={{ width: "80px", marginBottom: "1rem" }}>
               <CircularProgressbar
@@ -130,7 +128,7 @@ export default function Succes() {
                   trailColor: "#f7f7f7",
                 })}
               />
-              <h3 className="pt-2">Client Satisfaction</h3>
+              <h3 className="pt-2"> {t("h77")}</h3>
             </div>
           </div>
         </div>

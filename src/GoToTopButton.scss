@@ -1,0 +1,62 @@
+// ألوان ومتغيرات
+$button-bg: rgb(20, 20, 20);
+$hover-bg: rgb(54, 53, 52);
+$button-size: 65px;
+$text-color: rgba(231, 102, 102, 0.911);
+
+.buttonn1 {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: $button-bg;
+  // border: none;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 0px 4px rgba(41, 14, 140, 0.755);
+  cursor: pointer;
+  transition-duration: 0.3s;
+  overflow: hidden;
+  position: fixed;
+  bottom: 23px;
+  right: 20px;
+  z-index: 1000;
+
+  &:hover {
+    width: 55px;
+    height: 55px;
+    border-radius: 40px;
+    transition-duration: 0.3s;
+    background-color: $hover-bg;
+  }
+
+  &::before {
+    position: absolute;
+    bottom: -20px;
+    content: "Back to Top";
+    color: $text-color;
+    font-size: 1px;
+    transition-duration: 0.9s;
+
+    .buttonn1:hover & {
+      font-size: 17px;
+      opacity: 1;
+      bottom: unset;
+      // width: 80px;
+    }
+  }
+
+  .svgIcon {
+    width: 17px;
+    transition-duration: 0.2s;
+
+    path {
+      fill: $text-color;
+    }
+
+    &:hover {
+      transform: translateY(-200%);
+    }
+  }
+}

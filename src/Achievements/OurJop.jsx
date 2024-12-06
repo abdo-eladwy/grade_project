@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import "./OurJop.css";
-import img from './faq-1.jpg'
+import img from "./faq-1.jpg";
+import { useTranslation } from "react-i18next";
+
 export default function OurJop() {
   const [open, setOpen] = useState(""); // State to manage open accordion
 
   const toggleAccordion = (id) => {
-    setOpen(open === id ? "" : id); 
+    setOpen(open === id ? "" : id);
   };
+  const { t } = useTranslation();
 
   return (
-    <div className="pb-5" style={{background:'#0e1219'}}>
+    <div className="pb-5" style={{ background: "#0e1219" }}>
       <div className="header1 col-12 container d-flex text-white pb-4">
-        <h4 className="mt-5 mb-3  col-12 text-center">
-          Our job is helping our clients with legal issues that they may be
-          faced with. Also we are willing to find practical, efficient long-term
-          solutions.
-        </h4>
+        <h4 className="mt-5 mb-3  col-12 text-center">{t("carouselh9")}</h4>
       </div>
       <div className="header2 col-12 container d-flex justify-content-around mb-3">
         <div className=" header1 col-lg-6 col-md-12 col-12 mt-5">
@@ -25,15 +24,11 @@ export default function OurJop() {
                 onClick={() => toggleAccordion("first")}
                 className={open === "first" ? "active" : ""}
               >
-                1. Why Volenti law firm?
+                1. {t("label7")}
               </label>
               <div className={`content ${open === "first" ? "open" : ""}`}>
-                <p>
-                  Lorem ipsum dolor sit amet, mea in tacimates electram. Diam
-                  facilis cum ei, ei novum accusamus scribentur per. Ei agam
-                  necessitatibus ius. Ius ei dolorem constituto. Vel sale
-                  repudiandae no, harum putent vivendum ne ius. Quo ex unum
-                  iisque.
+                <p style={{color:'#d6c8c8'}}>
+                  {t("carouselp62")}
                 </p>
               </div>
             </li>
@@ -42,15 +37,11 @@ export default function OurJop() {
                 onClick={() => toggleAccordion("second")}
                 className={open === "second" ? "active" : ""}
               >
-                2. How does it work?
+                2. {t("label8")}
               </label>
               <div className={`content ${open === "second" ? "open" : ""}`}>
-                <p>
-                  Sale vivendum senserit an eum, ubique noster ex pro, at vel
-                  accommodare ullamcorper. Cu duo minim vocibus menandri, at
-                  omittam voluptatum usu. Fabulas docendi iracundia ex cum,
-                  viris putant dissentiunt ex cum. Id vim tale mutat, eu vide
-                  velit oporteat pri. Mollis vidisse saperet id per.
+                <p style={{color:'#d6c8c8'}}>
+                  {t("carouselp64")}
                 </p>
               </div>
             </li>
@@ -59,16 +50,11 @@ export default function OurJop() {
                 onClick={() => toggleAccordion("third")}
                 className={open === "third" ? "active" : ""}
               >
-                3. What differentiates Volenti from other lawyer services?
+                3. {t("label9")}
               </label>
               <div className={`content ${open === "third" ? "open" : ""}`}>
-                <p>
-                  Eam ei suscipit partiendo, nam modus vocibus cotidieque eu,
-                  semper apeirian laboramus sit ne. Qui apeirian tacimates at,
-                  has errem possim an, eligendi pericula delicatissimi per ad.
-                  At pro essent aliquip qualisque, vis splendide posidonium ex.
-                  Nec et error quodsi deleniti. Dicit nobis latine qui an, per
-                  duis summo impetus an, eam ne perfecto intellegat persequeris.
+                <p style={{color:'#d6c8c8'}}>
+                  {t("carouselp63")}
                 </p>
               </div>
             </li>
@@ -77,17 +63,11 @@ export default function OurJop() {
                 onClick={() => toggleAccordion("fourth")}
                 className={open === "fourth" ? "active" : ""}
               >
-                4. How can we help?
+                4. {t("label10")}
               </label>
               <div className={`content ${open === "fourth" ? "open" : ""}`}>
-                <p>
-                  In cibo aperiri evertitur vis, sit autem facete cotidieque cu,
-                  omnesque voluptua voluptatibus mea ut. Cum ea omnes percipitur
-                  cotidieque, propriae suavitate te qui, laudem voluptatibus ne
-                  ius. Ut eam lorem consul. Eam bonorum percipit explicari in,
-                  efficiendi scripserit ex sed. Usu soluta integre fastidii eu.
-                  Et mei ipsum sensibus delicata, ius eu choro solet denique.
-                  Populo facilisi urbanitas has ei.
+                <p style={{color:'#d6c8c8'}}>
+                  {t("carouselp65")}
                 </p>
               </div>
             </li>
@@ -102,4 +82,3 @@ export default function OurJop() {
     </div>
   );
 }
-

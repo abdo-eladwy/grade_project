@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import "./ScrollCounter.scss";
+import { useTranslation } from "react-i18next";
 
 export default function ScrollCounter() {
   const [count1, setCount1] = useState(0);
@@ -9,6 +10,7 @@ export default function ScrollCounter() {
   
   const hasAnimated = useRef(false);
   const boxRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -36,10 +38,10 @@ export default function ScrollCounter() {
 
   const startCounting = () => {
     const duration = 1000;
-    animateValue(setCount1, 0, 250, duration);
-    animateValue(setCount2, 0, 100, duration);
-    animateValue(setCount3, 0, 250, duration);
-    animateValue(setCount4, 0, 100, duration);
+    animateValue(setCount1, 0,1250, duration);
+    animateValue(setCount2, 0,94, duration);
+    animateValue(setCount3, 0,7, duration);
+    animateValue(setCount4, 0,28, duration);
   };
 
   const resetCounters = () => {
@@ -66,25 +68,25 @@ export default function ScrollCounter() {
     <div className="section4 col-12 d-flex justify-content-center align-items-center" ref={boxRef}>
       <div className="overlay w-100 h-100"></div>
       <div className="content col-12 d-flex flex-column justify-content-center align-items-center m-5 text-center">
-        <h6>Archivements</h6>
-        <h1>We Have Trust From 15 Years Operation</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <h6>{t("h82")}</h6>
+        <h1>{t("h83")}</h1>
+        <p>{t("carouselp61")}</p>
         <div className="d-flex flex-wrap col-12 justify-content-center">
           <div className="box1 col-12 col-md-6 col-lg-3">
-            <h1 className="boxh1">{count1}+</h1>
-            <h3>Company Partner</h3>
+            <h1 className="boxh1">{count1} +</h1>
+            <h3>{t("h78")}</h3>
           </div>
           <div className="box1 col-12 col-md-6 col-lg-3">
-            <h1 className="boxh1">{count2}+</h1>
-            <h3>Products Registered</h3>
+            <h1 className="boxh1">{count2} % </h1>
+            <h3>{t("h79")}</h3>
           </div>
           <div className="box1 col-12 col-md-6 col-lg-3">
-            <h1 className="boxh1">{count3}+</h1>
-            <h3>Cases Won</h3>
+            <h1 className="boxh1">{count3} +</h1>
+            <h3>{t("h80")}</h3>
           </div>
           <div className="box1 col-12 col-md-6 col-lg-3">
-            <h1 className="boxh1">{count4}+</h1>
-            <h3>Client Satisfaction</h3>
+            <h1 className="boxh1">{count4} +</h1>
+            <h3>{t("h81")}</h3>
           </div>
         </div>
       </div>

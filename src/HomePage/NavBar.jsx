@@ -4,6 +4,14 @@ import "./NavBar.css";
 import logo from "./volenti-logo3.png";
 import { Link, NavLink } from "react-router-dom";
 
+
+
+
+import { useTranslation } from "react-i18next";
+// import { Link } from "react-router-dom";
+
+
+
 export default function NavBar() {
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -21,6 +29,16 @@ export default function NavBar() {
     const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
     if (offcanvas) offcanvas.hide();
   };
+
+  const { i18n, t } = useTranslation();
+
+  // وظيفة تبديل اللغة
+  const toggleLanguage = () => {
+    const newLang = i18n.language === "en" ? "ar" : "en";
+    i18n.changeLanguage(newLang);
+  };
+
+
 
   return (
     <div className="col-12 d-flex">
@@ -46,31 +64,34 @@ export default function NavBar() {
             <ul className="navbar-nav me-auto">
               {/* Navbar links */}
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" to="/">Home</Link>
+              <Link className="nav-link" style={{fontSize:'1.0rem'}} to="/">{t("home")}</Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" to="/AboutUs">About Us</Link>
+              <Link className="nav-link" style={{fontSize:'1.0rem'}}  to="/AboutUs">{t("about")}</Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <a className="nav-link" href="#services">Help You</a>
+              <Link className="nav-link" style={{fontSize:'1.0rem'}}  to="/OurVision">{t("vision")}</Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" to="/OurVision">Our Vision</Link>
+              <Link className="nav-link" style={{fontSize:'1.0rem'}}  to="/Sections">{t("areas")}</Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" to="/Sections">Articles</Link>
+              <Link className="nav-link" style={{fontSize:'1.0rem'}}  to="/Achievement">{t("achievements")}</Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" to="/Achievement">Achievements</Link>
+                {/* <a className="nav-link" style={{fontSize:'1.2rem'}} href="#services">English</a> */}
+                <button className="nav-link" style={{fontSize:'1.0rem'}} onClick={toggleLanguage}>
+                  {i18n.language === "en" ? "عربي":"English" }
+                </button>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" to="/Contact">Contact Us</Link>
+              <Link className="nav-link " style={{fontSize:'1.0rem'}}  to="/Contact">{t("contact")}</Link>
               </li>
             </ul>
           </div>
           {/* Link for larger screens */}
           <div className="d-none d-lg-block">
-            <a className="btn btn-outline-secondary border-danger-subtle text-light" href="#services">Your Service</a>
+          <button className="btn btn-outline-secondary border-danger-subtle text-light p-2" href="#services">Our Service</button>
           </div>
         </div>
       </nav>

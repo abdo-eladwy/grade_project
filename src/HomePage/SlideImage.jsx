@@ -4,7 +4,9 @@ import slider1 from "./slider-3.jpg"; // استيراد صورة للسلايد�
 import slider2 from "./slider-2.jpg"; // استيراد صورة للسلايدر
 import slider3 from "./slider-1.jpg"; // استيراد صورة للسلايدر
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 export default function SlideImage() {
+  const { t } = useTranslation();
   return (
     <div className="col-12 d-flex">
       <div>
@@ -17,36 +19,36 @@ export default function SlideImage() {
             <div className="carousel-item active" data-bs-interval="10000">
               <img src={slider3} className="d-block w-100" alt="Slide 1" />
               <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                <h2 className="text-white ">خبرة شركات المحاماة الكبرى</h2>
-                <p style={{lineHeight:'30px'}}>
-                تلتزم شركتنا بأعلى معايير التميز القانوني، مستفيدة من سنوات طويلة من الخبرة التي مكنتنا من تحقيق نتائج إيجابية ومستدامة لعملائنا في قضايا معقدة
+                <h2 className="text-white mb-3">{t("carouselh2")}</h2>
+                <p className=" mb-4" style={{lineHeight:'30px'}}>
+                    {t("carouselp1")}
                 </p>
                 <Link className="btn btn-outline-light" to="/AboutUs">
-                  تعرف المزيد
+                 {t("carouselp2")}
                 </Link>
               </div>
             </div>
             <div className="carousel-item" data-bs-interval="2000">
               <img src={slider2} className="d-block w-100" alt="Slide 2" />
               <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                <h2 className="text-white">الابتكار والفعالية</h2>
-                <p style={{lineHeight:'30px'}}>
-                نحن رواد في تقديم حلول قانونية مبتكرة وشاملة، مدعومين بخبرة كبيرة في حل النزاعات بفعالية وتوفير حماية قانونية لعملائنا على مر السنين
+                <h2 className="text-white mb-3">{t("carouselh3")}</h2>
+                <p style={{lineHeight:'30px'}} className=" mb-4">
+                  {t("carouselp3")}
                 </p>
                 <Link className="btn btn-outline-light" to="/AboutUs">
-                  Learn More
+                {t("carouselp2")}
                 </Link>
               </div>
             </div>
             <div className="carousel-item">
               <img src={slider1} className="d-block w-100" alt="Slide 3" />
               <div className="carousel-caption d-flex flex-column justify-content-center align-items-center">
-                <h2 className="text-white"> تقديم الاستشارات القانونية</h2>
+                <h2 className="text-white">{t("carouselh4")}</h2>
                 <p style={{lineHeight:'30px'}}>
-                تتميز شركتنا بتاريخ طويل من النجاحات في تقديم الاستشارات القانونية المتخصصة، وذلك بفضل فريق من المحامين المخضرمين الذين يمتلكون خبرات واسعة في مختلف المجالات القانونية     
+                  {t("carouselp4")}
                  </p>
                 <Link className="btn btn-outline-light" to="/AboutUs">
-                  Learn More
+                {t("carouselp2")}
                 </Link>
               </div>
             </div>

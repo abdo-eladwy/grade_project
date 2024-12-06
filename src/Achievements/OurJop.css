@@ -21,9 +21,9 @@
     margin: 20px;
     padding: 10px;
     border-radius: 8px;
-    background: #e3edf78f;
+    background: #bed3e88f;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15),
-      -6px -6px 10px -1px rgba(225, 225, 225, 0.365);
+      -6px -6px 10px -1px rgba(225, 225, 225, 0.492);
   }
   
   .accordion li label {
@@ -47,7 +47,7 @@
   }
   
   .accordion .content {
-    color: #362c2c;
+    color: #f8f3f3;
     padding: 0 10px;
     line-height: 26px;
     max-height: 0;

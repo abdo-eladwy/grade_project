@@ -1,15 +1,30 @@
 import "./ScrollSlider.scss";
+import { useTranslation } from "react-i18next";
 
 export default function ScrollSlider() {
+  const { t } = useTranslation();
+
   return (
     <div className="section4 d-flex justify-content-center align-items-center col-12">
       <div className="overlay  d-flex justify-content-center align-items-center w-100 h-100"></div>
       {/* Add text content here */}
-      <div className="content container  text-center col-12">
-        <h1 className="text-center col-12">المحاماة مهنة ورسالة</h1>
-        <p style={{lineHeight:'35px'}}>المحاماة مهنه من اهم واشرف المهن ، وتكمن اهميتها فى المجتمع فى انها تشارك السلطه القضائيه فى تحقيق العدالة وفى تاكيد سيادة القانون وفى كفالة حق الدفاع عن حقوق المواطنين وحرياتهم</p>
+      <div className="content container  text-center col-12 pb-5">
+        <h1
+          style={{ fontSize: "48px", fontWeight: "700" }}
+          className="text-center col-12 pb-5"
+        >
+          {t("h30")}
+        </h1>
+        <h5
+          className="col-12 d-flex justify-content-center align-items-center align-content-center text-center pb-3"
+          style={{ color: "rgb(118, 112, 112" }}
+        >
+          {t("h29")}
+        </h5>
+        <p style={{ lineHeight: "35px", color: "rgb(165, 149, 149)" }}>
+          {t("carouselp23")}
+        </p>
       </div>
     </div>
   );
 }
-
