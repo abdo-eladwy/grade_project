@@ -12,7 +12,7 @@ export default function Boxs() {
     <div>
       <div className="boxs col-12 d-flex flex-wrap text-light">
         <img className="box-img col-6" src={img1} alt="" />
-        <div className="box-cont col-6  d-flex flex-column justify-content-center align-items-start align-content-center  p-5">
+        <div className="box-cont col-6  d-flex flex-column justify-content-center align-items-start align-content-center  p-md-5 p-3">
           <h6 className="mb-5">{t("h62")}</h6>
           <h1 className="mb-5 pb-5 " style={{fontSize:'48px', fontWeight:'700'}}>{t("h19")}</h1>
           <p className="mb-3  d-flex flex-wrap">
@@ -26,13 +26,13 @@ export default function Boxs() {
           </Link>
         </div>
 
-        <div className="box-cont col-6  d-flex flex-column justify-content-center align-items-start text-start p-5">
+        <div className="box-cont col-6  d-flex flex-column justify-content-center align-items-start text-start p-3 p-md-5">
           <h6 className="mb-5">{t("h63")}</h6>
           <h1 className="mb-5 pb-3"style={{fontSize:'48px', fontWeight:'700'}}>{t("h20")} </h1>
           <p className="mb-3 pb-2 d-flex flex-wrap"style={{fontSize:'16px' , fontWeight:'400'}}>
           {t("carouselp16")}
           </p>
-          <ul className="list-square mb-5 pb-2">
+          <ul className="list-square mb-5 pb-2 p-3 p-lg-4">
             <li> {t("li1")}</li>
             <li>{t("li2")} </li>
             <li>{t("li3")} </li>

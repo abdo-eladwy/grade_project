@@ -14,7 +14,7 @@ export default function Container() {
       className="container-fluid  text-light pt-5"
       style={{ background: " #0e1219" }}
     >
-      <div className="row gap-4 p-4">
+      <div className="row gap-4 p-lg-4">
         {/* container1 */}
         <div className="col-12 col-lg-8 pb-5 ">
           <div className="img col-12 pb-4">
@@ -77,7 +77,7 @@ export default function Container() {
         </div>
       </div>
       <div className="container5 container col-12 d-flex flex-column justify-content-center text-center mt-4">
-        <h1 className="container3h1 p-3"> {t("carouselh13")}</h1>
+        <h1 className="container3h1 "> {t("carouselh13")}</h1>
         <p className="container3p pb-5">{t("carouselp52")}</p>
       </div>
       <div className="button col-12 d-flex container justify-content-center  pb-5">

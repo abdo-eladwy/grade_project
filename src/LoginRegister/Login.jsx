@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import './Login.css'
 export default function Login() {
     return (
-        <div className="contener login-container col-12  content d-flex align-items-center justify-content-center">
+        <div className="contener login-container col-12  content d-flex align-items-center justify-content-center ">
         
     
           <div className='wrapper login-wrapper login container col-10 col-lg-4    content d-flex justify-content-center align-items-center align-content-center"'>

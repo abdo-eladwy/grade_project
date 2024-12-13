@@ -1,9 +1,11 @@
+import { useState } from "react";
 import "./Footer.scss";
 
 export default function Footer() {
+ 
   return (
-    <div className="footer col-12 d-flex align-content-center">
-      <div className="footercontent container  d-flex p-0 flex-wrap  ">
+    <div className="footer col-12 d-flex align-content-center  "    >
+      <div className="footercontent container  d-flex p-0 flex-wrap  " >
         <div className="col-12 c col-md-6 col-lg-3 p-3 prt1 ">
           <h5>About Us</h5>
           <p>

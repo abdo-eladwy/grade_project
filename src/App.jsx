@@ -24,6 +24,7 @@ import GoToTopButton from "./GoToTopButton";
 import WhatsAppButton from "./WhatsAppButton";
 export default function App() {
   return (
+    
   <div>
     <BrowserRouter>
     <GoToTopButton/>

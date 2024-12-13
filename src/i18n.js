@@ -1,4 +1,4 @@
-import i18n from "i18next";
+import i18n, { dir } from "i18next";
 import { initReactI18next } from "react-i18next";
 
 const resources = {
@@ -54,7 +54,7 @@ const resources = {
       carouselp99:"Legal strategies against corporate fraud focus on both prevention and resolution. Lawyers collaborate with companies to implement robust compliance programs, minimizing the risk of fraudulent practices. When fraud occurs, legal action ensures restitution for victims and reinforces the principles of accountability and transparency in corporate governance",
     },
   },
-  ar: {
+  ar: { 
     translation: {
       home: "الصفحة الرئيسية",about: "معلومات عنا",vision:"رؤيتنا",areas :"المجالات",achievements:"الانجازات",contact:"اتصل بنا", Service:" الخدمات",carouselh2:"خبرة شركات المحاماة الكبرى",carouselp1:"تلتزم شركتنا بأعلى معايير التميز القانوني، مستفيدة من سنوات طويلة من الخبرة التي مكنتنا من تحقيق نتائج إيجابية ومستدامة لعملائنا في قضايا معقدة",carouselp2:"  تعرف المزيد",carouselp3:" نحن رواد في تقديم حلول قانونية مبتكرة وشاملة، مدعومين بخبرة كبيرة في حل النزاعات بفعالية وتوفير حماية قانونية لعملائنا على مر السنين", carouselh3:"الابتكار والفعالية",carouselh4:" تقديم الاستشارات القانونية ",carouselp4:" تتميز شركتنا بتاريخ طويل من النجاحات في تقديم الاستشارات القانونية المتخصصة، وذلك بفضل فريق من المحامين المخضرمين الذين يمتلكون خبرات واسعة في مختلف المجالات القانونية ",
       h1:"العدالة ",h11:"التفاني",h12:"الخبرة",h13:"الرؤيه",carouselp5:" تحقيق العدالة في القانون هو الضمان الأساسي لحماية حقوق الأفراد، حيث نعمل جاهدين لتطبيق القوانين بكل نزاهة ومساواة، لنخلق مجتمعا عادلاً يلتزم بالقيم الإنسانية", carouselp6:"  نلتزم في عملنا بروح التفاني التام، حيث نبذل قصارى جهدنا لتقديم أفضل الخدمات القانونية، ونضع احتياجات عملائنا في مقدمة أولوياتنا لضمان حقوقهم وتحقيق تطلعاتهم القانونية",  carouselp7:" خبرتنا الواسعة تتيح لنا التعامل مع أعقد القضايا بكفاءة واحترافية، حيث نجمع بين المعرفة المتعمقة والإلمام بالتفاصيل القانونية، لنحقق أفضل النتائج لعملائنا على الدوام", carouselp8:"رؤيتنا تتمحور حول بناء علاقة قانونية قوية وموثوقة مع عملائنا، نعمل من خلالها على إيجاد حلول مبتكرة وفعّالة تدعم استقرارهم القانوني وتحقق أهدافهم طويلة المدى",  h14:" اقرا المزيد ",h61:"نبذة تاريخية",h17:" نحن شركة على الحوسنى، وهي شركة محاماة حائزة على جوائز",h441:" لقد ساعدنا العملاء الكبار والصغار منذ عام 1995", carouselp9:" مرحبًا بكم في شركة الحوسنى، حيث يجتمع التميز والاحترافية في عالم المحاماة. نحن شركة محاماة حائزة على جوائز، نقدم خدمات قانونية متكاملة تلبي احتياجاتكم بأعلى معايير الجودة والتميز",
@@ -102,5 +102,15 @@ i18n.use(initReactI18next).init({
   lng: "en", // اللغة الافتراضية
   fallbackLng: "en",
   interpolation: { escapeValue: false },
+});
+i18n.on('languageChanged', (lng) => {
+  const htmlElement = document.documentElement;
+  if (lng === "ar") {
+    htmlElement.setAttribute("dir", "rtl");
+    htmlElement.setAttribute("lang", "ar");
+  } else {
+    htmlElement.setAttribute("dir", "ltr");
+    htmlElement.setAttribute("lang", "en");
+  }
 });
 export default i18n;

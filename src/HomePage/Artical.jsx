@@ -13,10 +13,10 @@ export default function Artical() {
   return (
     <div>
          <div
-        className="artical d-flex justify-content-center flex-wrap p-5 bg-dark g-4"
+        className="artical d-flex justify-content-center flex-wrap p-md-5 bg-dark g-4"
         style={{ backgroundColor: "#0e1219" }}
       >
-        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
+        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-3 p-md-4  text-light mb-5 pb-4">
           <img src={icon1} alt="Image 1" className="img-fluiid mb-5" />
           <h1 className="mb-5">01. {t("h1")}</h1>
           <p className="mb-5">
@@ -24,7 +24,7 @@ export default function Artical() {
           </p>
           <Link to="/AboutUs">{t("h14")} → </Link>
         </div>
-        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
+        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-md-4 text-light mb-5 pb-4">
           <img src={icon2} alt="Image 2" className="img-fluiid mb-5" />
           <h1 className="mb-5">02. {t("h11")}</h1>
           <p className="mb-5">
@@ -32,7 +32,7 @@ export default function Artical() {
           </p>
           <Link to="/Achievement">{t("h14")} → </Link>
         </div>
-        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
+        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-md-4 text-light mb-5 pb-4">
           <img src={icon3} alt="Image 3" className="img-fluiid mb-5" />
           <h1 className="mb-5">03. {t("h12")}</h1>
           <p className="mb-5">
@@ -40,7 +40,7 @@ export default function Artical() {
           </p>
           <Link to="/Sections">{t("h14")} → </Link>
         </div>
-        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-4 text-light mb-5 pb-4">
+        <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-md-4 text-light mb-5 pb-4">
           <img src={icon4} alt="Image 3" className="img-fluiid mb-5" />
           <h1 className="mb-5">04. {t("h13")}</h1>
           <p className="mb-5">

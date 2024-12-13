@@ -17,7 +17,7 @@ export default function OurProcess() {
               className="h-100 w-100 "
             />
           </div>
-          <div className="col-12 col-md-6  pt-3 child child1">
+          <div className="col-12 col-md-6  pt-3 child child1 text-center">
             <span>{t("span8")}</span>
             <h2 className="mt-3">{t("h84")}</h2>
             <p className="mt-5 mt-md-3 mt-lg-5">
@@ -26,7 +26,7 @@ export default function OurProcess() {
           </div>
         </div>
         <div className="col-12   d-flex flex-wrap parent2">
-          <div className="col-12 col-md-6 pt-3 child1">
+          <div className="col-12 col-md-6 pt-3 child1 text-center">
             <span>{t("span9")}</span>
             <h2 className="mt-3">{t("h85")}</h2>
             <p className="mt-5 mt-md-3 mt-lg-5">
@@ -49,7 +49,7 @@ export default function OurProcess() {
               className="h-100 w-100"
             />
           </div>
-          <div className="col-12 col-md-6 pt-3 child child1 ">
+          <div className="col-12 col-md-6 pt-3 child child1 text-center">
             <span>{t("span10")}</span>
             <h2 className="mt-3">{t("h86")}</h2>
             <p className="mt-5 mt-md-3 mt-lg-5">

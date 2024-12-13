@@ -13,7 +13,7 @@ export default function History() {
       style={{ background: "#0e1219" }}
     >
       <div className="component col-12 d-flex justify-content-center flex-wrap text-light py-5">
-        <div className="component1 col-12 col-lg-5 d-flex flex-column justify-content-center align-items-start p-5 mb-5">
+        <div className="component1 col-12 col-lg-5 d-flex flex-column justify-content-center align-items-start p-3 p-md-5 mb-5">
           <h6
             className="text-uppercase pb-4"
             style={{ color: "rgb(255, 102, 102)" }}
