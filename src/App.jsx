@@ -22,6 +22,7 @@ import Register from "./LoginRegister/Register";
 import "./i18n";
 import GoToTopButton from "./GoToTopButton";
 import WhatsAppButton from "./WhatsAppButton";
+import Index from "./OurServices/Index";
 export default function App() {
   return (
     
@@ -37,6 +38,7 @@ export default function App() {
         <Route path="/OurVision" element={<OurVision/>}/>
         <Route path="/Achievement" element={<AchievementPage/>}/>
         <Route path="/Articles" element={<Articles/>}/>
+        <Route path="/index" element={<Index/>}/>
         <Route path="/Sections" element={<Sections/>}/>
         <Route path="/BusinessLitigation" element={<BusinessLitigation/>}/>
         <Route path="/MedicalMalpractice" element={<MedicalMalpractice/>}/>
