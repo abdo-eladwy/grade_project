@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "service_requests",
+  "info": {
+    "singularName": "service-request",
+    "pluralName": "service-requests",
+    "displayName": "service-requests",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_name": {
+      "type": "string",
+      "required": true
+    },
+    "user_email": {
+      "type": "email",
+      "unique": false,
+      "required": true
+    },
+    "user_checkbox": {
+      "type": "boolean",
+      "required": true
+    },
+    "checkbox_text": {
+      "type": "string",
+      "required": true
+    },
+    "user_phone": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

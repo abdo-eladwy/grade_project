@@ -1,0 +1,80 @@
+/* تصميم عام للبطاقات */
+.service-card,
+.team-card,
+.extra-service-card,
+.scroll-item {
+  background-color: #2c2c2c;
+  border: 1px solid #444;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover,
+.team-card:hover,
+.extra-service-card:hover,
+.scroll-item:hover {
+  transform: scale(1.05);
+}
+
+/* تصميم للعناوين داخل البطاقات */
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* تصميم للنصوص داخل البطاقات */
+.card-text {
+  color: #ccc;
+  margin-bottom: 5px;
+}
+
+/* تصميم لشريط العرض المتحرك */
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.scroll-content {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: calc(100% * 2.25); /* لعرض 4.5 بطاقات */
+}
+
+.scroll-item {
+  flex: 0 0 auto;
+  width: 20%;
+  margin-right: 20px;
+  text-align: center;
+}
+
+/* أنماط الصور داخل البطاقات المتحركة */
+.scroll-item img {
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.scroll-item h5 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.scroll-item p {
+  color: #bbb;
+}
+
+/* إعداد التمرير التلقائي */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-100% / 4.5)); } /* انتقال لـ 4.5 بطاقات */
+}
+
+.scroll-content {
+  animation: scroll 18s linear infinite; /* 18s = 4.5 * 3s */
+}
