@@ -13,7 +13,7 @@ export default function Artical() {
   return (
     <div>
          <div
-        className="artical d-flex justify-content-center flex-wrap p-md-5 bg-dark g-4"
+        className="artical d-flex justify-content-center flex-wrap p-md-5  g-4"
         style={{ backgroundColor: "#0e1219" }}
       >
         <div className="col-12 col-md-5 col-lg-3 d-flex flex-column justify-content-center align-items-center text-center p-3 p-md-4  text-light mb-5 pb-4">

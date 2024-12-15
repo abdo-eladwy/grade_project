@@ -83,7 +83,7 @@ export default function NavBar() {
       </nav>
 
       {/* Offcanvas Menu */}
-      <div className="offcanvas offcanvas-end text-bg-dark" tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div className="offcanvas offcanvas-end "style={{background: 'rgba(19, 19, 19, 0.85)',color:'white'}} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasNavbarLabel">{t("navigation")}</h5>
           <button type="button" className="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -115,7 +115,7 @@ export default function NavBar() {
             </li>
             {/* Link for small screens */}
             <li className="nav-item d-lg-none">
-              <a className="btn btn-outline-info border border-danger-subtle nav-link" href="#services" onClick={handleCloseOffcanvas}>{t("yourService")}</a>
+              <Link className="btn btn-outline-info border border-danger-subtle nav-link" to="/index" onClick={handleCloseOffcanvas}>{t("yourService")}</Link>
             </li>
           </ul>
         </div>

@@ -181,7 +181,7 @@ export default function MedicalMalpractice() {
                         className="p-3"
                         style={{ color: "rgb(255, 102, 102)" }}
                       >
-                        احجز خدمتك و تواصل معنا
+                        {t("carouselp100")}
                       </h4>
                     </div>
                     <label htmlFor="input1">
@@ -189,7 +189,7 @@ export default function MedicalMalpractice() {
                         className=" p-1"
                         style={{ color: "rgb(255, 102, 100)" }}
                       >
-                        الاسم :
+                        {t("carouselp101")} :
                       </h5>
                     </label>
                     <input
@@ -205,7 +205,7 @@ export default function MedicalMalpractice() {
                         className=" p-1"
                         style={{ color: "rgb(255, 102, 100)" }}
                       >
-                        الايميل :
+                        {t("carouselp102")} :
                       </h5>
                     </label>
                     <input
@@ -221,7 +221,7 @@ export default function MedicalMalpractice() {
                         className=" p-1"
                         style={{ color: "rgb(255, 102, 100)" }}
                       >
-                        التليفون :
+                        {t("carouselp103")} :
                       </h5>
                     </label>
                     <input
@@ -235,10 +235,10 @@ export default function MedicalMalpractice() {
                     <label className="material-checkbox mt-4 mb-4" required>
                       <input type="checkbox" required ref={booleaninput} />
                       <span className="checkmark" required></span>
-                      احجز استشارة للقانون الجنائى !
+                      {t("carouselp112")}
                     </label>
                     <div className="button col-12 d-flex container justify-content-center rounded-4">
-                      <button className=" rounded-5 ">احجز</button>
+                      <button className=" rounded-5 ">{t("carouselp105")}</button>
                     </div>
                   </form>
                 </div>

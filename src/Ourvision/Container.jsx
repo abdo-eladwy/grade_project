@@ -5,6 +5,7 @@ import "./Container.css";
 import { useTranslation } from "react-i18next";
 import img from "./Practice-item-1.jpg";
 import img1 from "./custody-battle-800x550 (1).jpg";
+import { Link } from "react-router-dom";
 
 export default function Container() {
   const { t } = useTranslation();
@@ -46,30 +47,32 @@ export default function Container() {
         {/* container2 */}
         <div className="col-12 col-lg-3 mt-3 mb-5 pb-4">
           <div className="container3">
-            <div className="container4 mb-5 text-start">
-              <h1>{t("carouselh14")}</h1>
+            <div className="container4 mb-4 text-center">
+              <h1 style={{ color: "rgb(208, 115, 115)" }}>
+                {t("carouselh14")}
+              </h1>
               <ul>
                 <li>
-                  <a href="">{t("h23")}</a>
+                  <Link to="/BusinessLitigation"> ›› {t("h23")}</Link>
                 </li>
                 <li>
-                  <a href="">{t("a2")}</a>
+                  <Link to="/RealEstate"> ›› {t("a2")}</Link>
                 </li>
                 <li>
-                  <a href="">{t("h25")}</a>
+                  <Link to="/InsuranceCoverage"> ›› {t("h25")}</Link>
                 </li>
                 <li>
-                  <a href="">{t("h26")}</a>
+                  <Link to="/MedicalMalpractice"> ›› {t("h26")}</Link>
                 </li>
                 <li>
-                  <a href="">{t("h27")}</a>
+                  <Link to="/FamilyLaw"> ›› {t("h27")}</Link>
                 </li>
                 <li>
-                  <a href="">{t("h28")}</a>
+                  <Link to="/InjuryLitigation"> ›› {t("h28")}</Link>
                 </li>
               </ul>
             </div>
-            <div className="col-12 p-4 mb-5 d-flex flex-wrap justify-content-center align-items-center text-start border m-1">
+            <div className="col-12 p-4 mb-5 d-flex flex-wrap justify-content-center align-items-center text-start border m-1 rounded-4">
               <p>{t("carouselp53")}</p>
               <h3>1-800-111-2222</h3>
             </div>

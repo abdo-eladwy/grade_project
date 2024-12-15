@@ -50,13 +50,7 @@ export default function Cards() {
             <p className=" pb-3">{t("carouselp20")}</p>
             <Link to="/MedicalMalpractice" className="mb-4">{t("h14")} → </Link>
           </div>
-          <div className="card1 col-3 col-11 container col-md-5 col-lg-3 m-3  p-3  d-flex flex-column justify-content-center align-content-center align-items-center g-4 text-center">
-            <img className=" pb-3" src={img8} alt="" />
-            <h6 style={{fontSize:'16px',fontWeight:'400'}}>{t("h67")}</h6>
-            <h1 style={{fontWeight:'700'}} className=" pb-1">{t("h27")} </h1>
-            <p className=" pb-3">{t('carouselp21')}</p>
-            <Link to="/FamilyLaw" className="mb-4">{t("h14")} →  </Link>
-          </div>
+
           <div className="card1 col-3 col-11 container col-md-5 col-lg-3 m-3  p-3  d-flex flex-column justify-content-center align-content-center align-items-center g-4 text-center">
             <img className=" pb-3" src={img7} alt="" />
             <h6 style={{fontSize:'16px',fontWeight:'400'}}>{t("h68")}</h6>
@@ -64,6 +58,15 @@ export default function Cards() {
             <p className=" pb-3">{t("carouselp22")}</p>
             <Link to="/InjuryLitigation" className="mb-4">{t("h14")} →  </Link>
           </div>
+
+          <div className="card1 col-3 col-11 container col-md-5 col-lg-3 m-3  p-3  d-flex flex-column justify-content-center align-content-center align-items-center g-4 text-center">
+            <img className=" pb-3" src={img8} alt="" />
+            <h6 style={{fontSize:'16px',fontWeight:'400'}}>{t("h67")}</h6>
+            <h1 style={{fontWeight:'700'}} className=" pb-1">{t("h27")} </h1>
+            <p className=" pb-3">{t('carouselp21')}</p>
+            <Link to="/FamilyLaw" className="mb-4">{t("h14")} →  </Link>
+          </div>
+          
         </div>
       </div>
     </div>

@@ -62,4 +62,17 @@
     }
   }
   
+  @media (max-width: 992px) {
+    .boxs {
+      flex-direction: column; /* ترتيب العناصر رأسياً */
+    }
+    .box-img1, .box-cont1 {
+      width: 100% !important; /* جعل الصور والمحتوى يأخذ عرض كامل */
+      margin-bottom: 2px; /* إضافة مسافة بين العناصر */
+    }
+    /* Specific adjustments for the second part */
+    .boxs > .box-cont:nth-child(2), .boxs > .box-img:nth-child(3) {
+      order: 2; /* ترتيب العناصر */
+    }
+  }
   

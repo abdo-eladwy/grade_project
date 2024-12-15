@@ -27,7 +27,7 @@ export default function Contact1() {
   };
 
   return (
-    <div className="col-12 bg-dark justify-content-center align-content-center p-3 pt-5 pb-5  text-light ">
+    <div className="col-12  justify-content-center align-content-center p-3 pt-5 pb-5  text-light ">
       <div className="col-12 container d-flex flex-wrap p-0  ">
         <div className="col-12 col-lg-6 part1 d-flex flex-column gap-4 ">
           <div className="part1-1">

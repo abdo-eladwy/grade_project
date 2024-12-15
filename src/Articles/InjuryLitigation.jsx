@@ -182,27 +182,27 @@ export default function InjuryLitigation() {
               <div className="pb-3 mt-4">
                 <form className="borderborderborder border border-1 col-12 col-lg-12 col-md-12 p-3 m-1 rounded-5"  onSubmit={login}>
                   <div className=" d-flex justify-content-center text-center">
-                    <h4 className="p-3" style={{color:'rgb(255, 102, 102)'}}>احجز خدمتك و تواصل معنا</h4>
+                    <h4 className="p-3" style={{color:'rgb(255, 102, 102)'}}> {t("carouselp100")}  </h4>
                   </div>
                   <label htmlFor="input1">
-                    <h5 className=" p-1" style={{color:'rgb(255, 102, 100)'}}>الاسم :</h5>
+                    <h5 className=" p-1" style={{color:'rgb(255, 102, 100)'}}> {t("carouselp101")}  :</h5>
                   </label>
                   <input type="text" id="input1"  ref={nameinput} className="form-control rounded-5 text-white" style={{background:'#121113'}} required />
                   <label htmlFor="input2">
-                    <h5 className=" p-1" style={{color:'rgb(255, 102, 100)'}}>الايميل :</h5>
+                    <h5 className=" p-1" style={{color:'rgb(255, 102, 100)'}}> {t("carouselp102")}  :</h5>
                   </label>
                   <input type="email" id="input2" ref={emailInput}  className="form-control rounded-5 text-white" style={{background:'#121113'}} required />
                   <label htmlFor="input3">
-                    <h5 className=" p-1" style={{color:'rgb(255, 102, 100)'}}>التليفون :</h5>
+                    <h5 className=" p-1" style={{color:'rgb(255, 102, 100)'}}> {t("carouselp103")}  :</h5>
                   </label>
                   <input type="tel" id="input3" ref={phoneInput} className="form-control rounded-5 text-white" style={{background:'#121113'}} required />
                   <label className="material-checkbox mt-4 mb-4" required>
                     <input type="checkbox" required ref={booleaninput} />
                     <span className="checkmark" required></span>
-                      احجز استشارة للمنازعات العمالية! 
+                     {t("carouselp109")}
                   </label>
                   <div className="button col-12 d-flex container justify-content-center rounded-4">
-                    <button className=" rounded-5 ">احجز</button>
+                    <button className=" rounded-5 "> {t("carouselp105")} </button>
                   </div>
                 </form>
               </div>
