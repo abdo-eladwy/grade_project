@@ -39,7 +39,7 @@ export default function ServicesList() {
       <div className="container-fluid text-light pt-5">
         <div className="col-12 mb-1 mt-3 text-center">
           <h2 className="pb-2" style={{ color: "rgb(255, 102, 102)" }}>
-            فريق العمل
+            {t("carouselp114")}
           </h2>
           <div className="row gap-1 p-3 justify-content-center">
            
@@ -50,9 +50,9 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(215, 120, 120)" }}
                   >
-                    المحامي أحمد سعيد
+                   {t("carouselp115")}
                   </h4>
-                  <p className="card-text">مختص في القضايا الجنائية والمدنية.</p>
+                  <p className="card-text"> {t("carouselp116")}</p>
                 </div>
               </div>
             </div>
@@ -63,9 +63,9 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(215, 120, 120)" }}
                   >
-                    المحامية سارة علي
+                    {t("carouselp117")}
                   </h4>
-                  <p className="card-text">متخصصة في قضايا الأسرة والعقود.</p>
+                  <p className="card-text">{t("carouselp118")}</p>
                 </div>
               </div>
             </div>
@@ -76,9 +76,9 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
-                    المحامية سارة علي
+                    {t("carouselp119")}
                   </h4>
-                  <p className="card-text">متخصصة في قضايا الأسرة والعقود.</p>
+                  <p className="card-text">{t("carouselp120")}</p>
                 </div>
               </div>
             </div>
@@ -89,9 +89,9 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
-                    المحامية سارة علي
+                    {t("carouselp121")}
                   </h4>
-                  <p className="card-text">متخصصة في قضايا الأسرة والعقود.</p>
+                  <p className="card-text">{t("carouselp122")}</p>
                 </div>
               </div>
             </div>
@@ -101,10 +101,10 @@ export default function ServicesList() {
         <div className="row p-4">
           <div className="col-12 mb-5 text-center">
             <h1 className="pb-2" style={{ color: "rgb(255, 102, 102)" }}>
-              خدمات مكتب المحاماة
+              {t("carouselp123")}
             </h1>
             <h5 style={{ color: "rgb(152, 58, 58)" }}>
-              هنا تجد كافة الطلبات المقدمة عبر نموذج الحجز.
+             {t("carouselp124")}
             </h5>
           </div>
 
@@ -119,13 +119,13 @@ export default function ServicesList() {
                     {el.user_name || "غير متاح"}
                   </h5>
                   <p className="card-text"style={{ color: "rgb(132, 132, 132)" }}>
-                    <strong>الإيميل:</strong> {el.user_email || "غير متاح"}
+                    <strong>{t("carouselp102")} :</strong> {el.user_email || "غير متاح"}
                   </p>
                   <p className="card-text"style={{ color: "rgb(132, 132, 132)" }}>
-                    <strong>التليفون:</strong> {el.user_phone || "غير متاح"}
+                    <strong>{t("carouselp103")} :</strong> {el.user_phone || "غير متاح"}
                   </p>
                   <p className="card-text"style={{ color:"rgb(132, 132, 132)" }}>
-                    <strong>الخدمة:</strong> {el.checkbox_text || "غير متاح"}
+                    <strong>{t("carouselp125")} :</strong> {el.checkbox_text || "غير متاح"}
                   </p>
                  
                 </div>
@@ -135,8 +135,8 @@ export default function ServicesList() {
         </div>
 
         <div className="col-12 mb-5 text-center">
-          <h2 className="pb-2" style={{ color: "rgb(255, 102, 102)" }}>
-            خدمات إضافية
+          <h2 className="pb-2 mb-4 " style={{ color: "rgb(255, 102, 102)" }}>
+            {t("carouselp126")}
           </h2>
           <div className="row justify-content-center">
             <div className="col-12 col-md-6 col-lg-4 mb-4">
@@ -146,10 +146,10 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
-                    الاستشارات القانونية
+                   {t("carouselp127")}
                   </h5>
                   <p className="card-text">
-                    نقدم استشارات قانونية متخصصة في مختلف المجالات.
+                    {t("carouselp128")}
                   </p>
                 </div>
               </div>
@@ -161,10 +161,10 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
-                    التمثيل القانوني
+                    {t("carouselp129")}
                   </h5>
                   <p className="card-text">
-                    نقوم بتمثيل عملائنا في مختلف القضايا القانونية.
+                    {t("carouselp130")}
                   </p>
                 </div>
               </div>
@@ -176,10 +176,10 @@ export default function ServicesList() {
                     className="card-title"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
-                    إعداد العقود
+                   {t("carouselp131")}
                   </h5>
                   <p className="card-text">
-                    نساعدك في إعداد ومراجعة العقود القانونية بشكل دقيق.
+                    {t("carouselp132")}
                   </p>
                 </div>
               </div>
@@ -190,7 +190,7 @@ export default function ServicesList() {
         {/* اعتمد اتصل بنا */}
         <div className="col-12 mb-5 text-center">
           <h2 className="pb-2" style={{ color: "rgb(255, 102, 102)" }}>
-            اتصل بنا
+            {t("a111")}
           </h2>
           <p>
             <strong>العنوان:</strong> شارع المحاماة، المدينة، الدولة

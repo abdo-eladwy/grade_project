@@ -15,7 +15,8 @@ export default function OurJop() {
   return (
     <div className="pb-5 text-light col-12" style={{ background: "#000000" }}>
       <div className="header1 col-12 container d-flex text-white ">
-        <h4 className="mt-5 col-12 text-center pt-4">
+        <h1 className="col-12 text-center mt-3" style={{color:'rgb(255, 102, 102)',fontSize:'45px',fontWeight:'700'}}>Most Frequent Questions</h1>
+        <h4 className=" col-12 text-center pt-3">
           {t("carouselh9")}
         </h4>
       </div>

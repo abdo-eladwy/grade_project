@@ -18,7 +18,7 @@ export default function Section15() {
         </div>
         <div className="col-12 col-lg-6 p-md-3 ">
           <span className=" d-block d-lg-inline mt-5  ">{t("span6")}</span>
-          <h2 className="mt-3" >{t("carouselh22")}</h2>
+          <h2 className="mt-3" style={{fontSize:'45px',fontWeight:'700'}}>{t("carouselh22")}</h2>
           <p className="mt-5" >
            {t("carouselp37")}
           </p>

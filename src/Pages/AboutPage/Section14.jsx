@@ -24,7 +24,7 @@ export default function Section14() {
              {t("carouselp30")}
             </p>
           </div>
-          <div className="d-flex flex-wrap text-start ">
+          <div className="d-flex flex-wrap text-end ">
             <div className=" col-12 col-md-6  son">
               <h4>{t("h41")}</h4>
               <p>
@@ -38,7 +38,7 @@ export default function Section14() {
               </p>
             </div>
           </div>
-          <div className="d-flex  flex-wrap text-start ">
+          <div className="d-flex  flex-wrap text-end ">
             <div className=" col-12 col-md-6   son">
               <h4>{t("h43")}</h4>
               <p>

@@ -141,7 +141,7 @@ export default function FamilyLaw() {
                       <img className="img-fluid1" src={img} alt="" />
                     </div>
                     <div className="col-12 col-lg-6 p-3">
-                      <h1 className="d-flex">{t("h90")}</h1>
+                      <h1 className="d-flex"style={{fontSize:'45px',fontWeight:'700',color:'rgb(255, 102, 102,0.7)'}}>{t("h90")}</h1>
                       <p>{t("carouselp73")}</p>
                     </div>
                   </div>

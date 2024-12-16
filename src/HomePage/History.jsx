@@ -20,11 +20,11 @@ export default function History() {
           >
             {t("h61")}
           </h6>
-          <h1 className="mb-5 pb-5 ">{t("h17")}</h1>
-          <h4 className="mb-2 pb-3">{t("h441")}</h4>
+          <h1 className="mb-5 pb-5 " style={{fontSize:'48px',fontWeight:'700'}}>{t("h17")}</h1>
+          <h4 className="mb-2 pb-3"><i>{t("h441")} </i>  </h4>
           <p className="mb-4">{t("carouselp9")}</p>
           <Link to="/Achievement">
-            <button className="btn-outline-light">{t("h14")}</button>
+            <button className="btn-outline-light rounded-1" style={{fontSize:'16px',fontWeight:'700'}}>{t("h14")}</button>
           </Link>
         </div>
 
@@ -32,7 +32,7 @@ export default function History() {
           <div className="component3 row w-100 mb-4 d-flex justify-content-between align-items-start">
             <div className="component5 container col-12 col-md-5 mb-5 d-flex flex-column justify-content-between border-bottom p-3">
               <h4>
-                <span>1995</span>
+                <span>2000</span>
               </h4>
               <h1 className="pb-4">{t("h15")}</h1>
               <p className="pb-5">
