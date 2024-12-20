@@ -33,7 +33,16 @@ export default function Container() {
               <img className="img-fluid" src={img1} alt="" />
             </div>
             <div className="col-12 col-lg-6 p-3">
-              <h1 className="d-flex" style={{fontSize:'45px',fontWeight:'700',color:'rgb(255, 102, 102,0.7)'}}>{t("carouselh11")}</h1>
+              <h1
+                className="d-flex"
+                style={{
+                  fontSize: "45px",
+                  fontWeight: "700",
+                  color: "rgb(255, 102, 102,0.7)",
+                }}
+              >
+                {t("carouselh11")}
+              </h1>
               <p>{t("carouselp50")}</p>
             </div>
           </div>
@@ -84,9 +93,9 @@ export default function Container() {
         <p className="container3p pb-5">{t("carouselp52")}</p>
       </div>
       <div className="button col-12 d-flex container justify-content-center  pb-5">
-        <a href="">
-          <button>{t("a111")}</button>
-        </a>
+        <Link to="/Contact">
+          <button className=" rounded-5">{t("a111")}</button>
+        </Link>
       </div>
     </div>
   );

@@ -68,7 +68,6 @@
       }
     }
   
-    /* لشاشات المتوسطة (أجهزة لوحية) */
     @media (max-width: 992px) {
       .content h1 {
         font-size: 2rem;
@@ -85,7 +84,6 @@
       }
     }
   
-    /* لشاشات الهواتف الذكية */
     @media (max-width: 768px) {
       display: flex;
       flex-wrap: wrap;
@@ -115,7 +113,6 @@
       }
     }
   
-    /* لشاشات الصغيرة جدًا (أقل من 576px) */
     @media (max-width: 576px) {
       .content h1 {
         font-size: 1.5rem;

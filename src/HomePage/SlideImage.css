@@ -8,8 +8,6 @@
     overflow-x: hidden;
   }
   
-/* سيكشن الاسليدر  */
-/* إعدادات السلايدر */
 .carousel:before {
     content: '';
     background-color: #0e1219;
@@ -22,19 +20,18 @@
   
   .carousel,
   .carousel-item {
-    height: 100vh; /* 100% من ارتفاع الشاشة */
-    width: 100vw;  /* 100% من عرض الشاشة */
+    height: 100vh;
+    width: 100vw; 
     background-color: rgba(0, 0, 0, 0.452);
   
   }
   
   .carousel-item img {
-    object-fit: cover; /* لضمان تغطية الصورة للشاشة بالكامل مع الحفاظ على النسب */
-    width: 100vw; /* تأكد من أن الصورة تغطي العرض بالكامل */
-    height: 100vh; /* تأكد من أن الصورة تغطي الارتفاع بالكامل */
+    object-fit: cover; 
+    width: 100vw; 
+    height: 100vh; 
     
   }
-  /* إضافة لون شفاف فوق الصور */
 .carousel-item::after {
   content: "";
   position: absolute;
@@ -42,69 +39,65 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* لون شفاف */
+  background-color: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
 .carousel-item img {
   position: relative;
-  z-index: 0; /* تأكد من أن الصورة تحت الـoverlay */
+  z-index: 0; 
 }
 
-  /* إعدادات العنوان والفقره في السلايدر */
   .carousel-caption {
-    position: absolute; /* تجعل النص يظهر فوق الصورة */
-    top: 0;/* وضع المحتوى في منتصف ارتفاع الصورة */
-    left: 0; /* وضع المحتوى في منتصف عرض الصورة */
+    position: absolute; 
+    top: 0;
+    left: 0; 
     right: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    transform: translate(0%, 0%); /* تحريك المحتوى للمنتصف بشكل دقيق */
-    text-align: center; /* توسيط النص */
-    color: white; /* لون النص */
-    z-index: 10; /* تأكد من أن المحتوى يظهر فوق الصور */
+    transform: translate(0%, 0%); 
+    text-align: center; 
+    color: white; 
+    z-index: 10; 
   }
   
-  /* إعدادات النص في السلايدر */
   .carousel-caption h2 {
-    font-size: 4.5rem; /* حجم الخط للعناوين */
+    font-size: 4.5rem; 
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* تأثير الظل للنص */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
   }
   
   .carousel-caption p {
-    font-size: 1.5rem; /* حجم الخط للفقرات */
+    font-size: 1.5rem; 
     font-weight: 400;
-    margin-top: 10px; /* مسافة بين العنوان والنص */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* تأثير الظل للنص */
+    margin-top: 10px; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
   
-  /* إعدادات الأزرار في السلايدر */
   .btn-outline-light {
-    border-color: white; /* لون حدود الزر */
-    color: white; /* لون النص */
-    margin-top: 15px; /* مسافة بين الفقره والززر */
-    padding: 10px 20px; /* حواف الزر */
-    transition: background-color 0.3s, color 0.3s; /* تأثيرات سلسة عند التغيير */
+    border-color: white;
+    color: white; 
+    margin-top: 15px; 
+    padding: 10px 20px; 
+    transition: background-color 0.3s, color 0.3s; 
   }
   
   .btn-outline-light:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* خلفية شفافة عند التمرير */
-    color: rgba(0, 0, 0, 0.9); /* لون النص عند التمرير */
+    background-color: rgba(255, 255, 255, 0.8); 
+    color: rgba(0, 0, 0, 0.9); 
     font-size: 1rem;
   }
-  /* Media Queries لتحسين العرض على الشاشات الصغيرة */
 @media (max-width: 768px) {
   
 
   .carousel-caption h2,
   .carousel-caption h1 {
-    font-size: 2.5rem; /* تقليل حجم العناوين */
+    font-size: 2.5rem; 
   }
 
   .carousel-caption p {
-    font-size: 1rem; /* تقليل حجم الفقرة */
+    font-size: 1rem; 
   }
 
   .btn-outline-light {

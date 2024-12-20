@@ -7,7 +7,6 @@
   .parent2,
   .parent3 {
     padding-bottom: 40px;
-    // height: 430px;
     @media (min-width: 768px) and (max-width: 1024px) {
       .images2 {
         order: 2;
@@ -23,9 +22,7 @@
 .parent3 {
   padding-top: 30px;
 }
-// img {
-//   // object-fit: contain;
-// }
+
 
 span {
   color: rgb(255, 102, 102);

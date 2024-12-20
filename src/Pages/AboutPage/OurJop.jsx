@@ -7,7 +7,7 @@ export default function OurJop() {
   const [open, setOpen] = useState("");
 
   const toggleAccordion = (id) => {
-    setOpen(open === id ? "" : id); // إذا كان نفس العنصر مفتوح، أغلقه وإلا افتح العنصر الجديد
+    setOpen(open === id ? "" : id); 
   };
   const { t } = useTranslation();
 

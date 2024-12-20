@@ -1,7 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
-import img2 from './top-header-about-us.jpg'
-import { useTranslation }  from"react-i18next";
+import img2 from "./top-header-about-us.jpg";
+import { useTranslation } from "react-i18next";
 
 export default function AboutMe() {
   const { t } = useTranslation();
@@ -19,4 +19,3 @@ export default function AboutMe() {
     </div>
   );
 }
-

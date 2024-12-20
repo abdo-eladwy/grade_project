@@ -35,18 +35,16 @@ body {
         padding: 2rem;
     }
 
-    /* التحكم في حجم دائري التقدم */
     .CircularProgressbar {
-        max-width: 100px; /* التحكم في حجم دائري التقدم */
+        max-width: 100px; 
         margin-bottom: 1rem;
     }
 }
 
-/* تعديل على الشاشات الأصغر */
 @media (max-width: 768px) {
     .Succes {
         flex-direction: column;
-        align-items: center; /* لضمان التوسيط على الشاشات الأصغر */
+        align-items: center; 
         
         h1 {
             font-size: 2rem;
@@ -55,33 +53,32 @@ body {
         }
 
         .divv {
-            width: 100%; /* جعل العرض بالكامل للشاشات الصغيرة */
+            width: 100%; 
         }
 
         .divv p {
             font-size: 0.9rem;
             margin-right: 0;
             padding: 1rem;
-            text-align: center; /* لضمان أن النص متناسب مع الشاشات الصغيرة */
+            text-align: center; 
         }
 
         .Succes2 {
             margin-top: 2rem;
-            width: 100%; /* تأكد من أن العناصر تحتل العرض الكامل */
+            width: 100%; 
         }
 
         .CircularProgressbar {
-            max-width: 80px; /* حجم أصغر لدائري التقدم */
+            max-width: 80px; 
         }
 
         h3 {
-            font-size: 1.2rem; /* تصغير حجم النص */
+            font-size: 1.2rem;
             text-align: center;
         }
     }
 }
 
-/* تحسين العرض على الشاشات الأصغر من 576px */
 @media (max-width: 576px) {
     .Succes {
         h1 {

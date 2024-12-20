@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 import "./Contact1.scss";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 
 export default function Contact1() {
@@ -22,22 +22,60 @@ export default function Contact1() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const whatsappUrl = `https://api.whatsapp.com/send?phone=+201026194164&text=Name: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AMessage: ${formData.message}`;
-    window.open(whatsappUrl, "_blank");
+
+    const { name, email, phone, message } = formData;
+
+    const phoneRegex = /^(\+20|0)?1[0125][0-9]{8}$/; 
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    if (!phoneRegex.test(phone)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'خطأ',
+        text: 'برجاء إدخال رقم هاتف مصري صالح.'
+      });
+      return;
+    }
+
+    if (!emailRegex.test(email)) {
+      Swal.fire({
+        icon: 'error',
+        title: 'خطأ',
+        text: 'برجاء إدخال بريد إلكتروني صالح.'
+      });
+      return;
+    }
+
+    Swal.fire({
+      icon: 'success',
+      title: 'شكرا',
+      text: 'شكرا على مشاركتنا قضيتك. سيتم نقلك إلى WhatsApp.',
+      showConfirmButton: true
+    }).then(() => {
+      const whatsappUrl = `https://api.whatsapp.com/send?phone=+201026194164&text=Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${message}`;
+
+      window.open(whatsappUrl, "_blank");
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    });
   };
 
   return (
-    <div className="col-12  justify-content-center align-content-center p-3 pt-5 pb-5  text-light ">
-      <div className="col-12 container d-flex flex-wrap p-0  ">
-        <div className="col-12 col-lg-6 part1 d-flex flex-column gap-4 ">
+    <div className="col-12 justify-content-center align-content-center p-3 pt-5 pb-5 text-light">
+      <div className="col-12 container d-flex flex-wrap p-0">
+        <div className="col-12 col-lg-6 part1 d-flex flex-column gap-4">
           <div className="part1-1">
             <span>{t("a111")}</span>
             <h2>{t("h89")}</h2>
           </div>
           <p className="part1-2 lh-lg">
-           {t("carouselp69")}
+            {t("carouselp69")}
           </p>
-          <div className="part1-3 d-flex  flex-column flex-md-row justify-content-between pt-md-3 pb-md-3 ">
+          <div className="part1-3 d-flex flex-column flex-md-row justify-content-between pt-md-3 pb-md-3">
             <div className="">
               <a href="#" className="link">
                 {t("a22")}
@@ -46,7 +84,7 @@ export default function Contact1() {
             </div>
             <div className="pt-3 pt-md-0">
               <a href="#" className="link">
-              {t("a23")}
+                {t("a23")}
               </a>
               <h2>contact@example.com</h2>
             </div>
@@ -70,20 +108,14 @@ export default function Contact1() {
           </div>
         </div>
 
-        <form className="col-12 col-lg-6 part2 d-flex flex-column p-lg-4 gap-5 pt-5 pt-md-0 " onSubmit={handleSubmit}>
-          
+        <form className="col-12 col-lg-6 part2 d-flex flex-column p-lg-4 gap-5 pt-5 pt-md-0" onSubmit={handleSubmit}>
           <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Name" required />
-          
-          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required/>
-          
-          <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" required/>
-         
+          <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email" required />
+          <input type="text" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone" required />
           <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Enter Message" required />
-          
           <button className="col-7 col-md-6 col-lg-6 m-md-auto m-0 m-lg-0 butt">{t("button3")}</button>
         </form>
       </div>
     </div>
-    // </div>
   );
 }

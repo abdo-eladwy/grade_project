@@ -16,7 +16,7 @@
   
   .OurVision img {
     width: 100%; 
-    height: 565px; /* يمكنك تعديل الارتفاع حسب الحاجة */
+    height: 565px; 
     object-fit: cover;
   }
   
@@ -46,20 +46,19 @@
     margin-bottom: 1rem;
   }
   
-  /* Media Queries for responsive design */
   @media (max-width: 768px) {
     .OurVision img {
-      height: 300px; /* أقل ارتفاع للشاشات الصغيرة */
+      height: 300px; 
     }
   
     .overlay-text h1 {
-      font-size: 2.5rem; /* حجم أصغر للعناوين */
+      font-size: 2.5rem; 
     }
   }
   
   @media (max-width: 576px) {
     .overlay-text h1 {
-      font-size: 2rem; /* حجم أصغر للعناوين في الأجهزة الصغيرة جدًا */
+      font-size: 2rem; 
     }
   }
   

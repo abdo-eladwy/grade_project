@@ -7,7 +7,6 @@
   body{
     overflow-x: hidden;
   }
-  /* السيكشن الرابع boxs */
 .box-cont{
     background-color: #121720;
   }
@@ -24,55 +23,52 @@
     height: 150.4px;
   } */
   .box-cont button {
-    border: 2px solid rgb(255, 102, 102); /* لون الحدود */
-    color: black; /* لون النص */
+    border: 2px solid rgb(255, 102, 102); 
+    color: black; 
     padding: 10px 20px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-    background-color: rgb(255, 102, 102); /* جعل الخلفية شفافة */
+    background-color: rgb(255, 102, 102);
     font-size: medium;
     font-weight:bold;
     text-decoration: none;
   }
   
-  /* التأثير عند مرور الماوس */
   .box-cont button:hover {
-    background-color: transparent; /* تظل الخلفية شفافة */
-    color:rgb(255, 102, 102); /* تغيير لون النص إلى الأبيض */
-    border-color:rgb(255, 102, 102); /* تغيير لون الحدود إلى الأبيض */
+    background-color: transparent; 
+    color:rgb(255, 102, 102); 
+    border-color:rgb(255, 102, 102);
   }
   .list-square li {
-    list-style-type: square; /* تظهر القائمة على شكل مربع */
-     /* لون النص يبقى كما هو */
-    margin-bottom: 10px; /* مسافة بين العناصر */
+    list-style-type: square; 
+    margin-bottom: 10px; 
     
   }
   
   .list-square li::marker {
-    color: rgb(255, 102, 102); /* لون المربع فقط */
+    color: rgb(255, 102, 102); 
   }
   @media (max-width: 992px) {
     .box-img, .box-cont {
-      width: 100% !important; /* جعل الصور والمحتوى يأخذ عرض كامل */
+      width: 100% !important; 
     }
     .boxs {
-      flex-direction: column; /* ترتيب العناصر رأسياً */
+      flex-direction: column; 
     }
     .box-img, .box-cont {
-      margin-bottom: 2px; /* إضافة مسافة بين العناصر */
+      margin-bottom: 2px; 
     }
   }
   
   @media (max-width: 992px) {
     .boxs {
-      flex-direction: column; /* ترتيب العناصر رأسياً */
+      flex-direction: column; 
     }
     .box-img1, .box-cont1 {
-      width: 100% !important; /* جعل الصور والمحتوى يأخذ عرض كامل */
-      margin-bottom: 2px; /* إضافة مسافة بين العناصر */
+      width: 100% !important; 
+      margin-bottom: 2px;
     }
-    /* Specific adjustments for the second part */
     .boxs > .box-cont:nth-child(2), .boxs > .box-img:nth-child(3) {
-      order: 2; /* ترتيب العناصر */
+      order: 2; 
     }
   }
   

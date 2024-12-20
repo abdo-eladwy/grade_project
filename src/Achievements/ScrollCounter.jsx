@@ -18,13 +18,13 @@ export default function ScrollCounter() {
         const [entry] = entries;
         if (entry.isIntersecting && !hasAnimated.current) {
           startCounting();
-          hasAnimated.current = true; // Ensures the animation only runs once
+          hasAnimated.current = true; 
         } else if (!entry.isIntersecting) {
           resetCounters();
-          hasAnimated.current = false; // Allows reanimation on re-entry
+          hasAnimated.current = false; 
         }
       },
-      { threshold: 0.5 } // Trigger when 50% of the element is in view
+      { threshold: 0.5 } 
     );
 
     if (boxRef.current) {

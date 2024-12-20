@@ -43,7 +43,7 @@ export default function History() {
               <h4>
                 <span>2004</span>
               </h4>
-              <h1 className="pb-4">100 {t("h16")}</h1>
+              <h1 className="pb-4">100{t("h16")}</h1>
               <p className="pb-5">
               {t("carouselp10")}
               </p>

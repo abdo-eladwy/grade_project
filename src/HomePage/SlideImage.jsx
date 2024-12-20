@@ -1,8 +1,8 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import './SlideImage.css'
-import slider1 from "./slider-3.jpg"; // استيراد صورة للسلايدر
-import slider2 from "./slider-2.jpg"; // استيراد صورة للسلايدر
-import slider3 from "./slider-1.jpg"; // استيراد صورة للسلايدر
+import slider1 from "./slider-3.jpg"; 
+import slider2 from "./slider-2.jpg"; 
+import slider3 from "./slider-1.jpg"; 
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 export default function SlideImage() {

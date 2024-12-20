@@ -11,6 +11,7 @@ import Footer from "../HomePage/Footer";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
 import Swal from "sweetalert2";
+
 export default function BusinessLitigation() {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -32,6 +33,7 @@ export default function BusinessLitigation() {
         setProducts(res.data.data);
       });
   };
+
   useEffect(() => {
     getProducts();
   }, []);
@@ -44,18 +46,15 @@ export default function BusinessLitigation() {
   const login = (event) => {
     event.preventDefault();
 
-    // تأكد من استرجاع النص بشكل صحيح
     const checkboxLabelElement = booleaninput.current.parentElement;
     const checkboxLabel = checkboxLabelElement
       ? checkboxLabelElement.textContent.trim()
       : "";
-
     console.log("Checkbox Label:", checkboxLabel);
     console.log("Checkbox Checked:", booleaninput.current.checked);
 
     const phoneNumber = phoneInput.current.value;
     const phoneRegex = /^(01)[0-9]{9}$/;
-
     if (!phoneRegex.test(phoneNumber)) {
       Swal.fire({
         icon: "error",
@@ -63,34 +62,44 @@ export default function BusinessLitigation() {
         timer: 1500,
       });
       return;
-      console.error("Invalid phone number");
-      // return;
     }
 
+    const formData = {
+      user_email: emailInput.current.value,
+      user_phone: phoneNumber,
+      user_name: nameinput.current.value,
+      user_checkbox: booleaninput.current.checked,
+      checkbox_text: checkboxLabel,
+    };
+
     axios
-      .post(`http://localhost:1337/api/service-requests`, {
-        data: {
-          user_email: emailInput.current.value,
-          user_phone: phoneNumber,
-          user_name: nameinput.current.value,
-          user_checkbox: booleaninput.current.checked, // استخدم .checked للحصول على قيمة الـ boolean
-          checkbox_text: checkboxLabel, // النص المجاور للـ checkbox
-        },
-      })
+      .post(`http://localhost:1337/api/service-requests`, { data: formData })
       .then((res) => {
         console.log(res.data);
 
-        // تفريغ الحقول بعد الإرسال
         emailInput.current.value = "";
         phoneInput.current.value = "";
         nameinput.current.value = "";
         booleaninput.current.checked = false;
+
         Swal.fire({
           icon: "success",
           title: "تم إرسال طلبك بنجاح!",
-          // showConfirmButton: true,
           timer: 1500,
         });
+
+        const whatsappMessage = `
+          الاسم: ${formData.user_name}
+          البريد الإلكتروني: ${formData.user_email}
+          الهاتف: ${formData.user_phone}
+          الحالة: ${formData.user_checkbox ? "موافق" : "غير موافق"}
+          النص: ${formData.checkbox_text}
+        `;
+
+        const whatsappUrl = `https://wa.me/201026194164?text=${encodeURIComponent(
+          whatsappMessage
+        )}`;
+        window.open(whatsappUrl, "_blank");
       })
       .catch((error) => {
         console.error("حدث خطأ أثناء تقديم الطلب:", error);
@@ -114,6 +123,7 @@ export default function BusinessLitigation() {
           </div>
         </div>
       </div>
+
       <div className="container-fluid m-2 text-light pt-5">
         <div className="row gap-4 p-4">
           <div className="col-12 col-lg-8 mb-5">
@@ -122,10 +132,7 @@ export default function BusinessLitigation() {
             </div>
             <div className="paragraph col-12 pb-2">
               <p className="pb-4">{t("carouselp70")}</p>
-              <p className="pb-3">
-                {t("carouselp71")}
-                assueverit per.
-              </p>
+              <p className="pb-3">{t("carouselp71")} assueverit per.</p>
               <p className="pb-3">{t("carouselp72")}</p>
             </div>
 
@@ -134,7 +141,16 @@ export default function BusinessLitigation() {
                 <img className="img-fluid1" src={img} alt="" />
               </div>
               <div className="col-12 col-lg-6 p-3">
-                <h1 className="d-flex"style={{fontSize:'45px',fontWeight:'700',color:'rgb(255, 102, 102,0.7)'}}>{t("h90")}</h1>
+                <h1
+                  className="d-flex"
+                  style={{
+                    fontSize: "45px",
+                    fontWeight: "700",
+                    color: "rgb(255, 102, 102,0.7)",
+                  }}
+                >
+                  {t("h90")}
+                </h1>
                 <p>{t("carouselp73")}</p>
               </div>
             </div>
@@ -153,22 +169,22 @@ export default function BusinessLitigation() {
                 </h1>
                 <ul>
                   <li>
-                    <Link to="/BusinessLitigation"> ›› {t("h23")}</Link>
+                    <Link to="/BusinessLitigation">›› {t("h23")}</Link>
                   </li>
                   <li>
-                    <Link to="/RealEstate"> ›› {t("a2")}</Link>
+                    <Link to="/RealEstate">›› {t("a2")}</Link>
                   </li>
                   <li>
-                    <Link to="/InsuranceCoverage"> ›› {t("h25")}</Link>
+                    <Link to="/InsuranceCoverage">›› {t("h25")}</Link>
                   </li>
                   <li>
-                    <Link to="/MedicalMalpractice"> ›› {t("h26")}</Link>
+                    <Link to="/MedicalMalpractice">›› {t("h26")}</Link>
                   </li>
                   <li>
-                    <Link to="/FamilyLaw"> ›› {t("h27")}</Link>
+                    <Link to="/FamilyLaw">›› {t("h27")}</Link>
                   </li>
                   <li>
-                    <Link to="/InjuryLitigation"> ›› {t("h28")}</Link>
+                    <Link to="/InjuryLitigation">›› {t("h28")}</Link>
                   </li>
                 </ul>
               </div>
@@ -185,7 +201,7 @@ export default function BusinessLitigation() {
                   </div>
                   <label htmlFor="input1">
                     <h5 className="p-1" style={{ color: "rgb(255, 102, 100)" }}>
-                      {t("carouselp101")} :
+                      {t("carouselp101")}:
                     </h5>
                   </label>
                   <input
@@ -198,7 +214,7 @@ export default function BusinessLitigation() {
                   />
                   <label htmlFor="input2">
                     <h5 className="p-1" style={{ color: "rgb(255, 102, 100)" }}>
-                      {t("carouselp102")} :
+                      {t("carouselp102")}:
                     </h5>
                   </label>
                   <input
@@ -211,7 +227,7 @@ export default function BusinessLitigation() {
                   />
                   <label htmlFor="input3">
                     <h5 className="p-1" style={{ color: "rgb(255, 102, 100)" }}>
-                      {t("carouselp103")} :
+                      {t("carouselp103")}:
                     </h5>
                   </label>
                   <input
@@ -240,12 +256,15 @@ export default function BusinessLitigation() {
             </div>
           </div>
         </div>
+
         <div className="container5 container col-12 d-flex flex-column justify-content-center text-center mt-4">
           <h1 className="container3h1 p-3">{t("h92")}</h1>
           <p className="container3p pb-5">{t("carouselp75")}</p>
         </div>
-        <div className="button col-12 d-flex container justify-content-center mb-5 pb-5">
-          <button className="rounded-5 col-2">{t("a111")}</button>
+        <div className="button col-12 d-flex container justify-content-center  pb-5">
+          <Link to="/Contact">
+            <button className=" rounded-5">{t("a111")}</button>
+          </Link>
         </div>
       </div>
       <Footer />

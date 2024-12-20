@@ -4,7 +4,7 @@ import img from "./faq-1.jpg";
 import { useTranslation } from "react-i18next";
 
 export default function OurJop() {
-  const [open, setOpen] = useState(""); // State to manage open accordion
+  const [open, setOpen] = useState(""); 
 
   const toggleAccordion = (id) => {
     setOpen(open === id ? "" : id);

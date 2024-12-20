@@ -44,7 +44,6 @@ export default function InsuranceCoverage() {
   const login = (event) => {
     event.preventDefault();
 
-    // تأكد من استرجاع النص بشكل صحيح
     const checkboxLabelElement = booleaninput.current.parentElement;
     const checkboxLabel = checkboxLabelElement
       ? checkboxLabelElement.textContent.trim()
@@ -73,24 +72,37 @@ export default function InsuranceCoverage() {
           user_email: emailInput.current.value,
           user_phone: phoneNumber,
           user_name: nameinput.current.value,
-          user_checkbox: booleaninput.current.checked, // استخدم .checked للحصول على قيمة الـ boolean
-          checkbox_text: checkboxLabel, // النص المجاور للـ checkbox
+          user_checkbox: booleaninput.current.checked,
+          checkbox_text: checkboxLabel,
         },
       })
       .then((res) => {
         console.log(res.data);
 
-        // تفريغ الحقول بعد الإرسال
         emailInput.current.value = "";
         phoneInput.current.value = "";
         nameinput.current.value = "";
         booleaninput.current.checked = false;
+
         Swal.fire({
           icon: "success",
           title: "تم إرسال طلبك بنجاح!",
-          // showConfirmButton: true,
           timer: 1500,
         });
+
+        const whatsappMessage = `
+      الاسم: ${nameinput.current.value}
+      البريد الإلكتروني: ${emailInput.current.value}
+      الهاتف: ${phoneNumber}
+      الحالة: ${booleaninput.current.checked ? "موافق" : "غير موافق"}
+      النص: ${checkboxLabel}
+    `;
+
+        const whatsappUrl = `https://wa.me/201026194164?text=${encodeURIComponent(
+          whatsappMessage
+        )}`;
+
+        window.open(whatsappUrl, "_blank");
       })
       .catch((error) => {
         console.error("حدث خطأ أثناء تقديم الطلب:", error);
@@ -134,7 +146,16 @@ export default function InsuranceCoverage() {
                     <img className="img-fluid1" src={img} alt="" />
                   </div>
                   <div className="col-12 col-lg-6 p-3">
-                    <h1 className="d-flex"style={{fontSize:'45px',fontWeight:'700',color:'rgb(255, 102, 102,0.7)'}}>{t("h90")}</h1>
+                    <h1
+                      className="d-flex"
+                      style={{
+                        fontSize: "45px",
+                        fontWeight: "700",
+                        color: "rgb(255, 102, 102,0.7)",
+                      }}
+                    >
+                      {t("h90")}
+                    </h1>
                     <p>{t("carouselp73")}</p>
                   </div>
                 </div>
@@ -241,7 +262,9 @@ export default function InsuranceCoverage() {
                         {t("carouselp110")}
                       </label>
                       <div className="button col-12 d-flex container justify-content-center rounded-4">
-                        <button className=" rounded-5 ">{t("carouselp105")}</button>
+                        <button className=" rounded-5 ">
+                          {t("carouselp105")}
+                        </button>
                       </div>
                     </form>
                   </div>
@@ -257,8 +280,10 @@ export default function InsuranceCoverage() {
               <h1 className="container3h1 p-3">{t("h92")}</h1>
               <p className="container3p pb-5">{t("carouselp75")}</p>
             </div>
-            <div className="button col-12 d-flex container justify-content-center mb-5 pb-5">
-              <button className=" rounded-5 col-2">{t("a111")}</button>
+            <div className="button col-12 d-flex container justify-content-center  pb-5">
+              <Link to="/Contact">
+                <button className=" rounded-5">{t("a111")}</button>
+              </Link>
             </div>
           </div>
           <Footer />

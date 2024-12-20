@@ -13,7 +13,6 @@ export default function Succes() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check for scroll
     const handleScroll = () => {
       const section = document.querySelector(".Succes");
       const rect = section.getBoundingClientRect();
@@ -23,7 +22,6 @@ export default function Succes() {
       }
     };
 
-    // Start counting once page loads
     startCounting();
     window.addEventListener("scroll", handleScroll);
 
