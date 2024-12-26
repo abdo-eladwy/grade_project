@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+//import * as bootstrap from 'bootstrap';/
 import "./NavBar.css";
 import logo from "./volenti-logo3.png";
 import { Link, NavLink } from "react-router-dom";
@@ -24,15 +25,18 @@ export default function NavBar() {
   };
 
   const handleCloseOffcanvas = () => {
-    const offcanvasElement = document.getElementById("offcanvasNavbar");
-    const offcanvas = bootstrap.Offcanvas.getInstance(offcanvasElement);
-    if (offcanvas) offcanvas.hide();
+    document.body.style.overflow = "visible";
+    document.body.style.padding = '0'
   };
 
   return (
     <div className="col-12 d-flex">
       {/* Navbar */}
-      <nav className={`navbar navbar-expand-lg ${isScrolled ? "scrolled" : "transparent-navbar"} fixed-top col-12`}>
+      <nav
+        className={`navbar navbar-expand-lg ${
+          isScrolled ? "scrolled" : "transparent-navbar"
+        } fixed-top col-12`}
+      >
         <div className="container">
           <Link className="navbar-brand col-3" to="/">
             <img src={logo} alt="Law Firm Logo" style={{ height: "40px" }} />
@@ -51,71 +55,156 @@ export default function NavBar() {
             <ul className="navbar-nav me-auto">
               {/* Navbar links */}
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" style={{ fontSize: '1.0rem' }} to="/">{t("home")}</Link>
+                <Link
+                  className="nav-link"
+                  style={{ fontSize: "1.0rem" }}
+                  to="/"
+                >
+                  {t("home")}
+                </Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" style={{ fontSize: '1.0rem' }} to="/AboutUs">{t("about")}</Link>
+                <Link
+                  className="nav-link"
+                  style={{ fontSize: "1.0rem" }}
+                  to="/AboutUs"
+                >
+                  {t("about")}
+                </Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" style={{ fontSize: '1.0rem' }} to="/OurVision">{t("vision")}</Link>
+                <Link
+                  className="nav-link"
+                  style={{ fontSize: "1.0rem" }}
+                  to="/OurVision"
+                >
+                  {t("vision")}
+                </Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" style={{ fontSize: '1.0rem' }} to="/Sections">{t("areas")}</Link>
+                <Link
+                  className="nav-link"
+                  style={{ fontSize: "1.0rem" }}
+                  to="/Sections"
+                >
+                  {t("areas")}
+                </Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link" style={{ fontSize: '1.0rem' }} to="/Achievement">{t("achievements")}</Link>
+                <Link
+                  className="nav-link"
+                  style={{ fontSize: "1.0rem" }}
+                  to="/Achievement"
+                >
+                  {t("achievements")}
+                </Link>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <button className="nav-link" style={{ fontSize: '1.0rem' }} onClick={toggleLanguage}>
+                <button
+                  className="nav-link"
+                  style={{ fontSize: "1.0rem" }}
+                  onClick={toggleLanguage}
+                >
                   {i18n.language === "en" ? "عربي" : "English"}
                 </button>
               </li>
               <li className="nav-item d-none d-lg-block m-2">
-                <Link className="nav-link " style={{ fontSize: '1.0rem' }} to="/Contact">{t("contact")}</Link>
+                <Link
+                  className="nav-link "
+                  style={{ fontSize: "1.0rem" }}
+                  to="/Contact"
+                >
+                  {t("contact")}
+                </Link>
               </li>
             </ul>
           </div>
           {/* Link for larger screens */}
           <div className="d-none d-lg-block">
-          <Link to="/index"><button className="btn btn-outline-secondary border-danger-subtle text-light p-2" href="#services">Our Service</button></Link>
+            <Link to="/index">
+              <button
+                className="btn btn-outline-secondary border-danger-subtle text-light p-2"
+                href="#services"
+              >
+                Our Service
+              </button>
+            </Link>
           </div>
         </div>
       </nav>
 
       {/* Offcanvas Menu */}
-      <div className="offcanvas offcanvas-end "style={{background: 'rgba(19, 19, 19, 0.85)',color:'white'}} tabIndex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div
+        className="offcanvas offcanvas-end "
+        style={{ background: "rgba(19, 19, 19, 0.85)", color: "white" }}
+        tabIndex="-1"
+        id="offcanvasNavbar"
+        aria-labelledby="offcanvasNavbarLabel"
+      >
         <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">{t("navigation")}</h5>
-          <button type="button" className="btn-close text-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <h5 className="offcanvas-title" id="offcanvasNavbarLabel">
+            {t("navigation")}
+          </h5>
+          <button
+            type="button"
+            className="btn-close text-light"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
         </div>
         <div className="offcanvas-body">
           <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link className="nav-link" to="/" onClick={handleCloseOffcanvas}>{t("home")} +</Link>
+            <li className="nav-item" onClick={handleCloseOffcanvas}>
+              <Link className="nav-link" to="/">
+                {t("home")} +
+              </Link>
+            </li>
+            <li className="nav-item" onClick={handleCloseOffcanvas}>
+              <Link className="nav-link" to="/AboutUs">
+                {t("about")} +
+              </Link>
+            </li>
+            <li className="nav-item" onClick={handleCloseOffcanvas}>
+              <Link className="nav-link" to="/OurVision">
+                {t("vision")} +
+              </Link>
+            </li>
+            <li className="nav-item" onClick={handleCloseOffcanvas}>
+              <Link className="nav-link" to="/Sections">
+                {t("areas")} +
+              </Link>
+            </li>
+            <li className="nav-item" onClick={handleCloseOffcanvas}>
+              <Link className="nav-link" to="/Achievement">
+                {t("achievements")} +
+              </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/AboutUs" onClick={handleCloseOffcanvas}>{t("about")} +</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/OurVision" onClick={handleCloseOffcanvas}>{t("vision")} +</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Sections" onClick={handleCloseOffcanvas}>{t("areas")} +</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Achievement" onClick={handleCloseOffcanvas}>{t("achievements")} +</Link>
-            </li>
-            <li className="nav-item">
-              <button className="nav-link" style={{ fontSize: '1.0rem' }} onClick={() => { toggleLanguage(); handleCloseOffcanvas(); }}>
+              <button
+                className="nav-link"
+                style={{ fontSize: "1.0rem" }}
+                onClick={() => {
+                  toggleLanguage();
+                  handleCloseOffcanvas();
+                }}
+              >
                 {i18n.language === "en" ? "عربي" : "English"} +
               </button>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/Contact" onClick={handleCloseOffcanvas}>{t("contact")} +</Link>
+            <li className="nav-item" onClick={handleCloseOffcanvas}>
+              <Link className="nav-link" to="/Contact">
+                {t("contact")} +
+              </Link>
             </li>
             {/* Link for small screens */}
             <li className="nav-item d-lg-none">
-              <Link className="btn btn-outline-info border border-danger-subtle nav-link" to="/index" onClick={handleCloseOffcanvas}>{t("yourService")}</Link>
+              <Link
+                className="btn btn-outline-info border border-danger-subtle nav-link"
+                to="/index"
+                onClick={handleCloseOffcanvas}
+              >
+                {t("yourService")}
+              </Link>
             </li>
           </ul>
         </div>

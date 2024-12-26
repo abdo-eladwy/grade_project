@@ -49,7 +49,7 @@ export default function ServicesList() {
               >
                 <div className="card-body">
                   <h4
-                    className="card-title"
+                    className="card-title d-flex"
                     style={{ color: "rgb(215, 120, 120)" }}
                   >
                     {t("carouselp115")}
@@ -151,7 +151,7 @@ export default function ServicesList() {
                   {" "}
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("h23")}
@@ -172,7 +172,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("a4")}
@@ -192,7 +192,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("h27")}
@@ -212,7 +212,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("h24")}
@@ -232,7 +232,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("h25")}
@@ -250,9 +250,9 @@ export default function ServicesList() {
                   to="/LaborLaw"
                   style={{ textDecoration: "none" }}
                 >
-                  <div className="card-body">
+                  <div className="card-body1">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("h46")}
@@ -272,7 +272,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("a5")}
@@ -292,7 +292,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("carouselp54")}
@@ -312,7 +312,7 @@ export default function ServicesList() {
                 >
                   <div className="card-body">
                     <h5
-                      className="card-title"
+                      className="card-title1"
                       style={{ color: "rgb(208, 115, 115)" }}
                     >
                       {t("carouselp57")}
@@ -330,7 +330,7 @@ export default function ServicesList() {
         <div className="col-12 mb-5 text-center">
           <h2
             className="pb-2 mb-1 mt-3 "
-            style={{ color: "rgb(255, 102, 102)" }}
+            style={{ color: "rgb(255, 102, 102)",fontWeight:'bolder' }}
           >
             {t("carouselp126")}
           </h2>
@@ -339,12 +339,12 @@ export default function ServicesList() {
               <div className="card extra-service-card h-100">
                 <div className="card-body">
                   <h5
-                    className="card-title"
+                    className="card-title2"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
                     {t("carouselp127")}
                   </h5>
-                  <p className="card-text">{t("carouselp128")}</p>
+                  <p className="card-text1">{t("carouselp128")}</p>
                 </div>
               </div>
             </div>
@@ -352,12 +352,12 @@ export default function ServicesList() {
               <div className="card extra-service-card h-100">
                 <div className="card-body">
                   <h5
-                    className="card-title"
+                    className="card-title2"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
                     {t("carouselp129")}
                   </h5>
-                  <p className="card-text">{t("carouselp130")}</p>
+                  <p className="card-text1">{t("carouselp130")}</p>
                 </div>
               </div>
             </div>
@@ -365,12 +365,12 @@ export default function ServicesList() {
               <div className="card extra-service-card h-100">
                 <div className="card-body">
                   <h5
-                    className="card-title"
+                    className="card-title2"
                     style={{ color: "rgb(208, 115, 115)" }}
                   >
                     {t("carouselp131")}
                   </h5>
-                  <p className="card-text">{t("carouselp132")}</p>
+                  <p className="card-text1">{t("carouselp132")}</p>
                 </div>
               </div>
             </div>
